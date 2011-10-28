@@ -235,6 +235,18 @@ td { vertical-align: top; }
 	padding: 20px;
 	margin: 0;
 }
+	#content-links li {
+		float: left;
+		
+		width: 200px;
+		height: 200px;
+		
+		margin: 10px;
+		
+		background: #fff;
+		
+		list-style-type: none;
+	}
 #content-frame {
 	display: none;
 }
