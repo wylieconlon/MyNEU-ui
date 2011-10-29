@@ -330,13 +330,23 @@ ul.menu div.panel a:hover {
 
 
 
+/* =============================================================================
+   Navbar
+   ========================================================================== */
 
+#navbar {
+	border-bottom: 2px solid black;
+	height: 30px;
+}
 
+#navbar #back {
+	display: inline;
+	border: 1px dotted red;
+}
 
-
-
-
-
+#navbar h1 {
+	display: inline;
+}
 
 
 /* ==|== non-semantic helper classes ========================================

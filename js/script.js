@@ -4,10 +4,11 @@
 
 // Opens a link
 function open(url, title) {
-	var category = $('#title').val();
+	console.log("Opening link " + title + ": " + url);
+	var category = $('#title').text();
 	// Load url into iframe
 	$('#content-frame').attr('src', url);
-	window.frames['#content-frame'].location.reload();
+	window.frames['content-frame'].location.reload();
 	// Fade in content
 	$('#content-wrapper').fadeIn();
 	// Change title
@@ -35,7 +36,7 @@ function catSelect(cat) {
 // And marks it active in the sidebar
 function scrollSubheading() {
 	var scrollPos = window.scrollTop,
-		subheadings = $('#content .subheading'),
+		subheadings = $('#content-wrapper .subheading'),
 		subcategory;
 
 	for(var i = 0, l = subheadings.length; i < l; i++) {
@@ -47,22 +48,17 @@ function scrollSubheading() {
 }
 
 
+
 // Sets up click & scroll handlers
-$('#content a').click(function() {
+$('#content-wrapper a').live('click', function(event) {
+	console.log($(this).text() + " link clicked");
+	event.preventDefault();
 	open($(this).href, $(this).text());
 })
 
 
-$('#sidebar a').click(function() {
+$('#sidebar a').live('click', function() {
 	catSelect($(this).text());
 })
 
-$('#content').scroll(scrollSubheading);
-
-
-
-
-
-
-
-
+$('#content-wrapper').scroll(scrollSubheading);
