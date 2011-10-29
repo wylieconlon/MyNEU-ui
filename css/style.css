@@ -326,6 +326,9 @@ ul.menu div.panel a:hover {
 
 #content-frame {
 	display: none;
+	position: absolute;
+	height: 500px;
+	width: 500px;
 }
 
 

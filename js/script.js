@@ -3,14 +3,14 @@
 */
 
 // Opens a link
-function open(url, title) {
+function openinframe(url, title) {
 	console.log("Opening link " + title + ": " + url);
 	var category = $('#title').text();
 	// Load url into iframe
 	$('#content-frame').attr('src', url);
-	window.frames['content-frame'].location.reload();
+	//window.frames['content-frame'].location.reload();
 	// Fade in content
-	$('#content-wrapper').fadeIn();
+	$('#content-frame').fadeIn();
 	// Change title
 	$('#title').text(title);
 	// Set back button behavior
@@ -53,7 +53,11 @@ function scrollSubheading() {
 $('#content-wrapper a').live('click', function(event) {
 	console.log($(this).text() + " link clicked");
 	event.preventDefault();
-	open($(this).href, $(this).text());
+	if($(this).hasClass('noiframe')) {
+		window.open($(this).attr('href'));
+	} else {
+		openinframe($(this).attr('href'), $(this).text());
+	}
 })
 
 
