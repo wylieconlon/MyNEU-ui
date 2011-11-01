@@ -91,6 +91,17 @@ function catSelect(cat) {
 	$('#content-links').html(lnks);
 }
 
+// Scroll to the given subcategory
+function subcatSelect(cat) {
+	// Fetch html from server?
+	/*
+	$.get('http://myneu-improved/?fetch='+cat, function(data) {
+		$('#content-links').html(data);
+	});
+	*/
+	window.location.hash = cat;
+}
+
 // Detects when a heading reaches the top of the page
 // And marks it active in the sidebar
 function scrollSubheading() {
@@ -117,10 +128,10 @@ $('#content-wrapper a').live('click', function(event) {
 	} else {
 		openinframe($(this).attr('href'), $(this).text());
 	}
-})
+});
 
-$('#sidebar a').live('click', function() {
-	catSelect($(this).text());
-})
+$('#menu a').click(function() {
+	catSelect($(this).attr('id'));
+});
 
 $('#content-wrapper').scroll(scrollSubheading);
