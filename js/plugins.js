@@ -127,51 +127,26 @@ jQuery.fn.initMenu = function() {
                 e.stopImmediatePropagation();
                 var theElement = $(this).next();
                 var parent = this.parentNode.parentNode;
-                if(theElement.hasClass('acitem') && theElement.is(':visible')) {
-                    if($(parent).hasClass('collapsible')) {
-                        $('.acitem:visible', parent).first().slideUp('fast', function() {
-                            $(this).prev().removeClass('active');
-                        });
-                    	return false;  
-                	}
-                    return false;
-	            }
                 if(theElement.hasClass('acitem') && !theElement.is(':visible')) {         
-                    $('.acitem:visible', parent).first().slideUp('fast', function() {
-                        $(this).prev().removeClass('active');
-                    });
+                    $('.acitem:visible', parent).first().slideUp('fast');
+                    $('.active').removeClass('active');
                     theElement.slideDown('fast', function() {
                         $(this).prev().addClass('active');
                     });
                     return false;
                 }
+                if(!theElement.hasClass('acitem')) {
+                	$('.acitem:visible', parent).first().slideUp('fast');
+                	$('.active').removeClass('active');
+                	$(this).addClass('active');
+                	return false;
+                }
             }
-    	);/*
-    	$('li a', this).hover(function(e) {
-            e.stopImmediatePropagation();
-            var theElement = $(this).next();
-            var parent = this.parentNode.parentNode;
-            if(theElement.hasClass('acitem') && theElement.is(':visible')) {
-                if($(parent).hasClass('collapsible')) {
-                    $('.acitem:visible', parent).first().slideUp('fast', 
-                        function() {
-                        	//$(this).prev().removeClass('active');
-                    });
-                	return false;  
-            	}
-            	return false;
-        	}
-            if(theElement.hasClass('acitem') && !theElement.is(':visible')) {         
-                $('.acitem:visible', parent).first().slideUp('fast', function() {
-                    //$(this).prev().removeClass('active');
-                });
-                theElement.slideDown('fast', function() {
-                    $(this).prev().addClass('active');
-                });
-                return false;
-            }
-        });*/
+    	);
 	});
 };
 
-$(document).ready(function() {$('.menu').initMenu();});
+$(document).ready(function() {
+	$('.menu').initMenu();
+	$(window.location.hash).click();
+});

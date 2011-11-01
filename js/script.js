@@ -1,4 +1,46 @@
+links = {};
+links['home'] = {
+	'subcategory': {
+		'name1': {
+			url: 'http://www.google.com/',
+			frame: false
+		},
+		'name2': {
+			url: 'http://www.google.com/2',
+			frame: true
+		},
+		'name3': {
+			url: 'http://www.google.com/3',
+			frame: true
+		}
+	},
+	'subcategory2': {
+		'name4': {
+			url: 'url',
+			frame: true
+		},
+		'name5': {
+			url: 'url',
+			frame: true
+		},
+		'name6': {
+			url: 'url',
+			frame: true
+		}
+	}
+};
+
 /* Author: Eric Kelly
+
+
+Bugs:
+Clicking a link on the side doesn't change the content view
+Allow single-menu items to show up as selected
+
+Todo:
+Categorize links more
+STYLING!!!
+Hover Menu?
 
 */
 
@@ -29,7 +71,24 @@ function close(title) {
 
 // Called when a category is selected
 function catSelect(cat) {
-	$('#'+cat).addClass('active');
+	// Fetch html from server?
+	/*
+	$.get('http://myneu-improved/?fetch='+cat, function(data) {
+		$('#content-links').html(data);
+	});
+	*/
+	var lnks = '';
+	for(subcat in links[cat]) {
+		lnks += "<h3>"+subcat+"</h3>";
+		for(name in links[cat][subcat]) {
+			lnks += '<li><a href="' + links[cat][subcat][name].url + '"';
+			if(!links[cat][subcat][name].frame) {
+				lnks += ' class="noiframe"';
+			}
+			lnks += '>' + name + '</a></li>';
+		}
+	}
+	$('#content-links').html(lnks);
 }
 
 // Detects when a heading reaches the top of the page
@@ -59,7 +118,6 @@ $('#content-wrapper a').live('click', function(event) {
 		openinframe($(this).attr('href'), $(this).text());
 	}
 })
-
 
 $('#sidebar a').live('click', function() {
 	catSelect($(this).text());

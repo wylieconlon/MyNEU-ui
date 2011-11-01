@@ -259,6 +259,11 @@ ul.menu a.active, ul.menu ul.menu li a.active, ul.menu a.active:hover, ul.menu u
     text-decoration: underline;
     background: #c00;
 }
+
+/* 
+
+I'm pretty sure the following is useless
+
 div.panel {
     border: 1px #000 solid;
     padding: 5px;
@@ -279,6 +284,7 @@ ul.menu div.panel a:hover {
     text-decoration: underline;
 }
 
+*/
 
 /* ==|== primary styles =====================================================
    Author: 
@@ -318,6 +324,7 @@ ul.menu div.panel a:hover {
 	height: 200px;
 	
 	margin: 10px;
+	margin-top: 40px;
 	
 	background: #fff;
 	
@@ -326,9 +333,11 @@ ul.menu div.panel a:hover {
 
 #content-frame {
 	display: none;
-	position: absolute;
+	position: fixed;
 	height: 500px;
 	width: 500px;
+	margin-top: 32px;
+	border: 0px;
 }
 
 
@@ -340,6 +349,9 @@ ul.menu div.panel a:hover {
 #navbar {
 	border-bottom: 2px solid black;
 	height: 30px;
+	width: 100%;
+	position: fixed;
+	background: red;
 }
 
 #navbar #back {
