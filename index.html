@@ -38,31 +38,59 @@
 
   <div id="container">
     <div id="main" role="main">
-		<ul id="sidebar">
-			<li><a href="">Sidebar</a></li>
-			<li>Sidebar</li>
-			<li>Sidebar</li>
-			<li>Sidebar</li>
-			<li>Sidebar</li>
-			<li>Sidebar</li>
-			<li>Sidebar</li>
-			<li>Sidebar</li>
+		<ul id="menu" class="menu">
+			<li><a id="favorites">Favorites</a></li>
+			<li><a id="home">Home</a></li>
+			<li><a id="classes">Classes</a>
+				<ul class="acitem">
+					<li><a href="#classes_registrar">Registrar</a></li>
+					<li><a href="#classes_resources">Study & Course Resources</a></li>
+					<li><a href="#classes_commencement">Commencement</a></li>
+				</ul>
+			</li>
+			<li><a id="coop">Co-op & Career Services</a>
+				<ul class="acitem">
+					<li><a href="#coop_cool">COOL</a></li>
+					<li><a href="#coop_advising">Advising</a></li>
+					<li><a href="#coop_international">International</a></li>
+					<li><a href="#coop_resources">Resources</a></li>
+				</ul>
+			</li>
+			<li><a id="housing">Residence/Housing</a>
+				<ul class="acitem">
+					<li><a href="#housing_room&board">Room and Board</a></li>
+					<li><a href="#housing_infolinks">Informational Links</a></li>
+					<li><a href="#housing_campusactivities">Campus Doings</a></li>
+				</ul>
+			</li>
+			<li><a id="finance">Finance</a>
+				<ul class="acitem">
+					<li><a href="#finance_financeaid">Financial Aid</a></li>
+					<li><a href="#finance_account">My Account</a></li>
+					<li><a href="#finance_save">Ways to Save</a></li>
+				</ul>
+			</li>
+			<li><a id="calenders">Calenders</a></li>
+			<li><a id="links">University Links</a></li>
+			<li><a id="settings">Settings</a></li>
 		</ul>
 		
 		<div id="content-wrapper">
-			<ul id="content-links" class="clearfix">
-				<li>Content</li>
-				<li>content</li>
-				<li>content</li>
-				<li>content</li>
-				<li>content</li>
-				<li>content</li>
-				<li>content</li>
-				<li>content</li>
-				<li>content</li>
-			</ul>
-			
+			<div id="navbar"><div id="back" style="display: none">Back</div><h1 id="title">Favorites</h1></div>
 			<iframe id="content-frame"></iframe>
+			<ul id="content-links" class="clearfix">
+				<h3>Subcategory1</h3>
+				<li><a href="http://mail.husky.neu.edu/" class="noiframe">Husky Mail</a></li>
+				<li><a href="http://ccs.neu.edu/">CCIS</a></li>
+				<li><a>Content</a></li>
+				<li><a>Content</a></li>
+				<li><a>Content</a></li>
+				<h3>Subcategory2</h3>
+				<li><a>Content</a></li>
+				<li><a>Content</a></li>
+				<li><a>Content</a></li>
+				<li><a>Content</a></li>
+			</ul>
 		</div>
     </div>
   </div> <!--! end of #container -->
@@ -71,7 +99,7 @@
   <!-- JavaScript at the bottom for fast page loading -->
 
   <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript"></script>
   <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
 
 
