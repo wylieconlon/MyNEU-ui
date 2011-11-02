@@ -122,16 +122,19 @@ jQuery.fn.initMenu = function() {
         $('.acitem', this).hide();
         $('li.expand > .acitem', this).show();
         $('li.expand > .acitem', this).prev().addClass('active');
-        $('li a', this).click(
-            function(e) {
+        $('li a', this).click(function(e) {
                 e.stopImmediatePropagation();
-                var theElement = $(this).next();
-                var parent = this.parentNode.parentNode;
+                var theElement = $(this).next();  // ul->acitem if exists, nothing if doesn't
+                var parent = this.parentNode.parentNode;  // ul->menu
                 if(theElement.hasClass('acitem') && !theElement.is(':visible')) {         
                     $('.acitem:visible', parent).first().slideUp('fast');
                     $('.active').removeClass('active');
                     theElement.slideDown('fast', function() {
                         $(this).prev().addClass('active');
+                        // If clicked item is a subcategory
+                        if(parent.hasClass('acitem')) {
+                        	$(parent).prev().addClass('active');
+                        }
                     });
                     return false;
                 }
