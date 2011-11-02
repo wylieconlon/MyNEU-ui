@@ -3,6 +3,8 @@ links['Classes'] = {
 
 	'Registrar': {
 	
+		id: 'classes_registrar',
+	
 		'Student Self Service': {
 			url: 'https://bnr8ssbp.neu.edu/udcprod8/twbkwbis.P_GenMenu?name=bmenu.P_StuMainMnu',
 			frame: true
@@ -70,6 +72,8 @@ links['Classes'] = {
 	},
 
 	'Study and Course Resources': {
+	
+		id: 'classes_resources',
 	
 		'Advisor Appointment Calendar': {
 			url: 'https://prod-web.neu.edu/webapp6/public/calendar/booking/app/secure/main.action?',
@@ -180,13 +184,15 @@ function catSelect(cat) {
 	*/
 	var lnks = '';
 	for(subcat in links[cat]) {
-		lnks += "<h3>"+subcat+"</h3>";
+		lnks += "<h3 id='"+ links[cat][subcat].id + "'>"+subcat+"</h3>";
 		for(name in links[cat][subcat]) {
-			lnks += '<li><a href="' + links[cat][subcat][name].url + '"';
-			if(!links[cat][subcat][name].frame) {
-				lnks += ' class="noiframe"';
+			if(name !== 'id') {
+				lnks += '<li><a href="' + links[cat][subcat][name].url + '"';
+				if(!links[cat][subcat][name].frame) {
+					lnks += ' class="noiframe"';
+				}
+				lnks += '>' + name + '</a></li>';
 			}
-			lnks += '>' + name + '</a></li>';
 		}
 	}
 	$('#content-links').html(lnks);
@@ -232,11 +238,11 @@ $('#content-wrapper a').live('click', function(event) {
 });
 
 $('#menu a').click(function() {
-	var title = $(this).text();
-	if($(this).hasClass('subcat')) {
-		subcatSelect(title);
+	window.location.hash = '';
+	if($(this).parent().parent().hasClass('acitem')) {
+		subcatSelect($(this).attr('href'));
 	} else {
-		catSelect(title);
+		catSelect($(this).text());
 	}
 });
 
