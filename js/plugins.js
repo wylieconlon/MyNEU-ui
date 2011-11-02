@@ -124,17 +124,15 @@ jQuery.fn.initMenu = function() {
         $('li.expand > .acitem', this).prev().addClass('active');
         $('li a', this).click(function(e) {
                 e.stopImmediatePropagation();
-                var theElement = $(this).next();  // ul->acitem if exists, nothing if doesn't
-                var parent = this.parentNode.parentNode;  // ul->menu
+                var theElement = $(this).next();
+                var parent = $(this).parent().parent();
                 if(theElement.hasClass('acitem') && !theElement.is(':visible')) {         
                     $('.acitem:visible', parent).first().slideUp('fast');
                     $('.active').removeClass('active');
                     theElement.slideDown('fast', function() {
                         $(this).prev().addClass('active');
-                        // If clicked item is a subcategory
-                        if(parent.hasClass('acitem')) {
-                        	$(parent).prev().addClass('active');
-                        }
+                        // Highlight the first subsection
+						$(this).children().filter(':first').children().addClass('active');
                     });
                     return false;
                 }
@@ -142,6 +140,10 @@ jQuery.fn.initMenu = function() {
                 	$('.acitem:visible', parent).first().slideUp('fast');
                 	$('.active').removeClass('active');
                 	$(this).addClass('active');
+                	// If clicked item is a subcategory
+                    if($(parent).hasClass('acitem')) {
+                      	$(parent).prev().addClass('active');
+                    }
                 	return false;
                 }
             }
