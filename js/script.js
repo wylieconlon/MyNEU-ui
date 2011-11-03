@@ -1,4 +1,5 @@
 links = {};
+
 links['Classes'] = {
 
 	'Registrar': {
@@ -105,6 +106,93 @@ links['Classes'] = {
 			frame: true
 		}
 	}
+
+	'Commencement': {
+	
+		'Apply to Graduate': {
+			url: 'https://bnr8ssbp.neu.edu/udcprod8/bwskgrad.p_disp_gradapp',
+			frame: true
+		},
+		
+		'View Application to Graduate': {
+			url: 'https://bnr8ssbp.neu.edu/udcprod8/bwskgrad.p_view_gradapp',
+			frame: true
+		},
+		
+		'NU Commencement Website': {
+			url: 'http://www.northeastern.edu/commencement/',
+			frame: true
+		}
+	}
+
+links['Co-op and Career Services'] = {
+	'Co-op': {
+		'Getting Started': {
+				url: 'http://neubos3es100.nunet.neu.edu/myNEU/coop/gettingStarted.aspx',
+				frame: true
+		},
+		'COOL': {
+				url: 'https://www.cool.neu.edu/students/mainmenu.aspx',
+				frame: true
+		},
+
+		'COOL Tour': {
+				url: 'http://www.coolquicktour.neu.edu/',
+				frame: true
+		}
+	},
+
+	'Advising': {
+		'Appointment Calendar': {
+				url: 'https://prod-web.neu.edu/webapp6/public/calendar/booking/app/secure/main.action?',
+				frame: true
+		},
+
+		'Contacts': {
+				url: 'http://neubos3es100.nunet.neu.edu/myNEU/tools/contacts.aspx?mode=coop',
+				frame: true
+		},
+		'Decide on a Career or Major': {
+				url: 'http://www.northeastern.edu/careerservices/majorscareers/index.html',
+				frame: true
+		},
+		'Resume Services': {
+				url: 'http://www.northeastern.edu/careerservices/resumes/resumes.html',
+				frame: true
+		},
+		'Job Search Guidance': {
+				url: 'http://www.northeastern.edu/careerservices/jobsearch/index.html',
+				frame: true
+		}
+	},
+
+
+	'Resources': {
+		'Co-op Forms': {
+				url: 'http://neubos3es100.nunet.neu.edu/myNEU/tools/forms.aspx?mode=coop',
+				frame: true
+		},
+		'Co-op FAQ': {
+				url: 'http://neubos3es100.nunet.neu.edu/myNEU/coop/faq.aspx',
+				frame: true
+		},
+		'Find an Internship': {
+				url: 'http://www.northeastern.edu/careerservices/internships/index.html',
+				frame: true
+		},
+		'Husky Career Link': {
+				url: 'http://northeastern.experience.com/er/security/login.jsp',
+				frame: true
+		}
+	}
+		
+		
+}
+
+
+
+
+
 }
 
 /*
