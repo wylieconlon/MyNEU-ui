@@ -2,6 +2,7 @@ default_image = 'img/default.png'; // 200 * 160
 
 links = {};
 links['Home'] = {
+	'My Big Subcategory': {
 		'Husky Card Account Balances': {
 			url: 'https://prod-web.neu.edu/webapp6/HuskyCard/CurrentBalance/secure/retrieve/main.do',
 			frame: true
@@ -16,6 +17,7 @@ links['Home'] = {
 			url: 'https://bnr8ssbp.neu.edu/udcprod8/twbkwbis.P_GenMenu?name=bmenu.P_RegMnu',
 			frame: true
 		}
+	}
 }
 links['Classes'] = {
 
