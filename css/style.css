@@ -334,8 +334,8 @@ ul.menu div.panel a:hover {
 #content-frame {
 	display: none;
 	position: fixed;
-	height: 500px;
-	width: 500px;
+	height: 100%;
+	width: 80%;
 	margin-top: 32px;
 	border: 0px;
 }
@@ -356,11 +356,20 @@ ul.menu div.panel a:hover {
 
 #navbar #back {
 	display: inline;
-	border: 1px dotted red;
+	position: relative;
+	top: 7px;
+	left: 5px;
+	background: black;
+	color: white;
+	padding: 2px;
 }
 
 #navbar h1 {
 	display: inline;
+	position: absolute;
+	margin: 0px;
+	padding: 0px;
+	margin-left: 100px;
 }
 
 
