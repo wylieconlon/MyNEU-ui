@@ -107,7 +107,7 @@ links['Classes'] = {
 			url: 'http://northeastern.bncollege.com/webapp/wcs/stores/servlet/BNCBHomePage?storeId=17555&catalogId=10001',
 			frame: true
 		}
-	}
+	},
 
 	'Commencement': {
 	
@@ -126,8 +126,9 @@ links['Classes'] = {
 			frame: true
 		}
 	}
-
+};
 links['Co-op and Career Services'] = {
+
 	'Co-op': {
 		'Getting Started': {
 				url: 'http://neubos3es100.nunet.neu.edu/myNEU/coop/gettingStarted.aspx',
@@ -149,19 +150,22 @@ links['Co-op and Career Services'] = {
 				url: 'https://prod-web.neu.edu/webapp6/public/calendar/booking/app/secure/main.action?',
 				frame: true
 		},
-
+		
 		'Contacts': {
 				url: 'http://neubos3es100.nunet.neu.edu/myNEU/tools/contacts.aspx?mode=coop',
 				frame: true
 		},
+		
 		'Decide on a Career or Major': {
 				url: 'http://www.northeastern.edu/careerservices/majorscareers/index.html',
 				frame: true
 		},
+		
 		'Resume Services': {
 				url: 'http://www.northeastern.edu/careerservices/resumes/resumes.html',
 				frame: true
 		},
+		
 		'Job Search Guidance': {
 				url: 'http://www.northeastern.edu/careerservices/jobsearch/index.html',
 				frame: true
@@ -174,27 +178,22 @@ links['Co-op and Career Services'] = {
 				url: 'http://neubos3es100.nunet.neu.edu/myNEU/tools/forms.aspx?mode=coop',
 				frame: true
 		},
+		
 		'Co-op FAQ': {
 				url: 'http://neubos3es100.nunet.neu.edu/myNEU/coop/faq.aspx',
 				frame: true
 		},
+		
 		'Find an Internship': {
 				url: 'http://www.northeastern.edu/careerservices/internships/index.html',
 				frame: true
 		},
+		
 		'Husky Career Link': {
 				url: 'http://northeastern.experience.com/er/security/login.jsp',
 				frame: true
 		}
-	}
-		
-		
-}
-
-
-
-
-
+	}	
 }
 
 /*
@@ -296,15 +295,10 @@ function catSelect(cat) {
 
 // Scroll to the given subcategory
 function subcatSelect(cat) {
-	// Fetch html from server?
-	/*
-	$.get('http://myneu-improved/?fetch='+cat, function(data) {
-		$('#content-links').html(data);
-	});
-	*/
 	window.location.hash = cat;
 }
 
+/*
 // Detects when a heading reaches the top of the page
 // And marks it active in the sidebar
 function scrollSubheading() {
@@ -319,8 +313,7 @@ function scrollSubheading() {
 		}
 	}
 }
-
-
+*/
 
 // Sets up click & scroll handlers
 $('#content-wrapper a').live('click', function(event) {
@@ -342,4 +335,4 @@ $('#menu a').click(function() {
 	}
 });
 
-$('#content-wrapper').scroll(scrollSubheading);
+//$('#content-links').scroll(scrollSubheading);
