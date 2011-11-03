@@ -1,3 +1,5 @@
+default_image = 'img/default.png'; // 200 * 160
+
 links = {};
 links['Classes'] = {
 
@@ -191,7 +193,13 @@ function catSelect(cat) {
 				if(!links[cat][subcat][name].frame) {
 					lnks += ' class="noiframe"';
 				}
-				lnks += '>' + name + '</a></li>';
+				lnks += '><img src="';
+				if(typeof(links[cat][subcat][name].img) == 'undefined') {
+					lnks += default_image;
+				} else {
+					lnks += links[cat][subcat][name].img;
+				}
+				lnks += '">' + name + '</a></li>';
 			}
 		}
 	}
