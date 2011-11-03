@@ -134,6 +134,8 @@ links['Classes'] = {
 
 	'Commencement': {
 	
+		id: 'classes_commencement',
+	
 		'Apply to Graduate': {
 			url: 'https://bnr8ssbp.neu.edu/udcprod8/bwskgrad.p_disp_gradapp',
 			frame: true

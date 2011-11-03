@@ -253,6 +253,7 @@ td { vertical-align: top; }
 
 .menu li a:hover, .menu li .active/*, ul.menu ul.menu li a:hover*/ {
 	background: #7a7a7a url('../img/buttons.png') no-repeat 0 -38px;
+	color: #800517;
 }
 
 .menu .acitem li a {
