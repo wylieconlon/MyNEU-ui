@@ -387,17 +387,17 @@ function catSelect(cat) {
 		lnks += "<h3 id='"+ links[cat][subcat].id + "'>"+subcat+"</h3>";
 		for(name in links[cat][subcat]) {
 			if(name !== 'id') {
-				lnks += '<li><a href="' + links[cat][subcat][name].url + '"';
+				lnks += '<li class="tile"><a href="' + links[cat][subcat][name].url + '" class="image-container';
 				if(!links[cat][subcat][name].frame) {
-					lnks += ' class="noiframe"';
+					lnks += ' noiframe';
 				}
-				lnks += '><img src="';
+				lnks += '"><img src="';
 				if(typeof(links[cat][subcat][name].img) == 'undefined') {
 					lnks += default_image;
 				} else {
 					lnks += links[cat][subcat][name].img;
 				}
-				lnks += '">' + name + '</a></li>';
+				lnks += '"></a><a href="' + links[cat][subcat][name].url + '" class="name">' + name + '</a></li>';
 			}
 		}
 	}
