@@ -3,11 +3,12 @@ default_image = 'img/default.png'; // 200 * 160
 links = {};
 links['Home'] = {
 	'Popular Links': {
+	/*
 		'Husky Card Account Balances': {
 			url: 'https://prod-web.neu.edu/webapp6/HuskyCard/CurrentBalance/secure/retrieve/main.do',
 			frame: true
 		},
-		
+	*/
 		'LaundryView': {
 			url: 'http://www.laundryview.com/lvs.php',
 			frame: true
