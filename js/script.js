@@ -1,7 +1,22 @@
 default_image = 'img/default.png'; // 200 * 160
 
 links = {};
+links['Home'] = {
+		'Husky Card Account Balances': {
+			url: 'https://prod-web.neu.edu/webapp6/HuskyCard/CurrentBalance/secure/retrieve/main.do',
+			frame: true
+		},
+		
+		'LaundryView': {
+			url: 'http://www.laundryview.com/lvs.php',
+			frame: true
+		},
 
+		'Course Information and Registration': {
+			url: 'https://bnr8ssbp.neu.edu/udcprod8/twbkwbis.P_GenMenu?name=bmenu.P_RegMnu',
+			frame: true
+		}
+}
 links['Classes'] = {
 
 	'Registrar': {
@@ -165,11 +180,21 @@ links['Co-op and Career Services'] = {
 				url: 'http://www.northeastern.edu/careerservices/resumes/resumes.html',
 				frame: true
 		},
-		
+
+		'Cover Letter Critique': {
+				url: 'http://www.northeastern.edu/careerservices/resumes/coverletters.html',
+				frame: true
+		},
+		'Mock Interviews': {
+				url: 'http://www.northeastern.edu/careerservices/jobsearch/interviewing.html',
+				frame: true
+		},
 		'Job Search Guidance': {
 				url: 'http://www.northeastern.edu/careerservices/jobsearch/index.html',
 				frame: true
 		}
+
+
 	},
 
 
@@ -192,8 +217,86 @@ links['Co-op and Career Services'] = {
 		'Husky Career Link': {
 				url: 'http://northeastern.experience.com/er/security/login.jsp',
 				frame: true
+		},
+		'Career Search': {
+				url: 'http://northeastern.experience.com/er/security/login.jsp',
+				frame: true
 		}
+
+		
 	}	
+		
+}
+links['Residence/Housing'] = {
+	'Room and Board': {
+		'Housing On-Line': {
+				url: 'https://rms.neu.edu/',
+				frame: true
+		},
+		'Meal Plan Changes': {
+				url: 'https://bnr8ssbp.neu.edu/udcprod8/bzskoacc.p_selmp',
+				frame: true
+		},
+
+		'Profiler Meal Plan Changes': {
+				url: 'https://bnr8ssbp.neu.edu/udcprod8/bzskoacc.p_ppinfo',
+				frame: true
+		},
+		'On-Campus Mailbox Information': {
+				url: 'https://prod-web.neu.edu/webapp6/resmailbox/',
+				frame: true
+		},
+		'Dining Services': {
+				url: 'http://www.nudining.com/',
+				frame: true
+		}
+	},
+	'Informational Links': {
+		'Apply for Parking': {
+				url: 'https://prod-web.neu.edu/webapp6/nuparking/SignupAuth.do',
+				frame: true
+		},
+		'Facilities Online Work Request': {
+				url: 'https://workreq.neu.edu/workrequest/',
+				frame: true
+		},
+
+		'Husky Express': {
+				url: 'https://workreq.neu.edu/workrequest/',
+				frame: true
+		},
+		'LaundryView': {
+				url: 'http://www.laundryview.com/lvs.php',
+				frame: true
+		}
+	},
+	'Campus Doings': {
+		'Campus Calendar': {
+				url: 'http://www.northeastern.edu/studentlife/calendar/',
+				frame: true
+		},
+		'Council for University Programs': {
+				url: 'http://www.cup.neu.edu/',
+				frame: true
+		},
+
+		'Resident Student Association: {
+				url: 'http://www.rsa.neu.edu/wordpress/',
+				frame: true
+		},
+		'Student Government Association': {
+				url: 'http://www.sga.neu.edu/',
+				frame: true
+		},
+		'WRBB Campus Radio': {
+				url: 'http://wrbbradio.org/',
+				frame: true
+		}
+	}
+
+
+
+
 }
 
 /*
