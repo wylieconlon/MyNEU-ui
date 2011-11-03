@@ -2,7 +2,7 @@ default_image = 'img/default.png'; // 200 * 160
 
 links = {};
 links['Home'] = {
-	'My Big Subcategory': {
+	'Popular Links': {
 		'Husky Card Account Balances': {
 			url: 'https://prod-web.neu.edu/webapp6/HuskyCard/CurrentBalance/secure/retrieve/main.do',
 			frame: true
@@ -16,6 +16,11 @@ links['Home'] = {
 		'Course Information and Registration': {
 			url: 'https://bnr8ssbp.neu.edu/udcprod8/twbkwbis.P_GenMenu?name=bmenu.P_RegMnu',
 			frame: true
+		},
+		
+		'Husky Mail': {
+			url: 'http://mail.husky.neu.edu/',
+			frame: false
 		}
 	}
 }
@@ -282,7 +287,7 @@ links['Residence/Housing'] = {
 				frame: true
 		},
 
-		'Resident Student Association: {
+		'Resident Student Association': {
 				url: 'http://www.rsa.neu.edu/wordpress/',
 				frame: true
 		},
@@ -316,7 +321,7 @@ Co-op and Career SErvices
 	International
 	Resources
 
-Residence/Housing
+hrefence/Housing
 	Room and board
 	Informational links
 	Campus Doings	
@@ -436,8 +441,10 @@ $('#menu a').click(function() {
 	if($(this).parent().parent().hasClass('acitem')) {
 		subcatSelect($(this).attr('href'));
 	} else {
+		$('#title').text($(this).text());
 		catSelect($(this).text());
 	}
 });
 
 //$('#content-links').scroll(scrollSubheading);
+$(function() {$('#home').click();});
