@@ -19,8 +19,7 @@ links['Home'] = {
 			url: 'http://mail.husky.neu.edu/',
 			noframe: true
 		}
-	}
-}
+};
 links['Classes'] = {
 
 	id: '',
@@ -116,185 +115,323 @@ links['Classes'] = {
 					url: 'http://northeastern.bncollege.com/webapp/wcs/stores/servlet/BNCBHomePage?storeId=17555&catalogId=10001',
 					frame: true
 				}
+			},
+
+			'Study and Course Resources': {
+
+				id: 'classes_resources',
+
+				links: {
+					'Advisor Appointment Calendar': {
+						url: 'https://prod-web.neu.edu/webapp6/public/calendar/booking/app/secure/main.action?',
+						frame: true
+					},
+					'Request a Tutor': {
+						url: 'https://neuforms2.neu.edu/lfserver/library_peer_tutor_request',
+						frame: true
+					},
+					'Advisor Appointment Calendar': {
+						url: 'https://prod-web.neu.edu/webapp6/public/calendar/booking/app/secure/main.action?',
+						frame: true
+					},
+					'myTRACE': {
+						url: 'http://myneu.neu.edu/cp/ip/login?sys=trace&url=https://ce7.connectedu.net/etw/crseval.asp?i=8',
+						frame: true
+					},
+					'CPS Class Evaluation Results': {
+						url: 'http://neu.evaluationkit.com/MyEval/StudentReport.aspx',
+						frame: true
+					},
+					'Bookstore': {
+						url: 'http://northeastern.bncollege.com/webapp/wcs/stores/servlet/BNCBHomePage?storeId=17555&catalogId=10001',
+						frame: true
+					}
+				}
+			},
+			'Commencement': {
+
+				id: 'classes_commencement',
+
+				links: {
+					'Apply to Graduate': {
+						url: 'https://bnr8ssbp.neu.edu/udcprod8/bwskgrad.p_disp_gradapp',
+						frame: true
+					},
+					'View Application to Graduate': {
+						url: 'https://bnr8ssbp.neu.edu/udcprod8/bwskgrad.p_view_gradapp',
+						frame: true
+					},
+					'NU Commencement Website': {
+						url: 'http://www.northeastern.edu/commencement/',
+						frame: true
+					}
+				}
 			}
 		},
-		'Commencement': {
-		
-			id: 'classes_commencement',
-			
-			links: {
-				'Apply to Graduate': {
-					url: 'https://bnr8ssbp.neu.edu/udcprod8/bwskgrad.p_disp_gradapp',
-					frame: true
-				},
-				'View Application to Graduate': {
-					url: 'https://bnr8ssbp.neu.edu/udcprod8/bwskgrad.p_view_gradapp',
-					frame: true
-				},
-				'NU Commencement Website': {
-					url: 'http://www.northeastern.edu/commencement/',
-					frame: true
+};
+links['Co-op and Career Services'] = {
+		id: '',
+		subcategories: {
+			'Co-op': {
+				id: 'coop_coop',
+				links: {
+					'Getting Started': {
+						url: 'http://neubos3es100.nunet.neu.edu/myNEU/coop/gettingStarted.aspx',
+						frame: true
+					},
+					'COOL': {
+						url: 'https://www.cool.neu.edu/students/mainmenu.aspx',
+						frame: true
+					},
+
+					'COOL Tour': {
+						url: 'http://www.coolquicktour.neu.edu/',
+						frame: true
+					}
+				}
+			},
+
+			'Advising': {
+				id: 'coop_advising',
+				links: {
+					'Appointment Calendar': {
+						url: 'https://prod-web.neu.edu/webapp6/public/calendar/booking/app/secure/main.action?',
+						frame: true
+					},
+
+					'Contacts': {
+						url: 'http://neubos3es100.nunet.neu.edu/myNEU/tools/contacts.aspx?mode=coop',
+						frame: true
+					},
+
+					'Decide on a Career or Major': {
+						url: 'http://www.northeastern.edu/careerservices/majorscareers/index.html',
+						frame: true
+					},
+
+					'Resume Services': {
+						url: 'http://www.northeastern.edu/careerservices/resumes/resumes.html',
+						frame: true
+					},
+
+					'Cover Letter Critique': {
+						url: 'http://www.northeastern.edu/careerservices/resumes/coverletters.html',
+						frame: true
+					},
+					'Mock Interviews': {
+						url: 'http://www.northeastern.edu/careerservices/jobsearch/interviewing.html',
+						frame: true
+					},
+					'Job Search Guidance': {
+						url: 'http://www.northeastern.edu/careerservices/jobsearch/index.html',
+						frame: true
+					}
+				}
+
+
+			},
+
+
+			'Resources': {
+				id: 'coop_resources',
+				links: {
+					'Co-op Forms': {
+						url: 'http://neubos3es100.nunet.neu.edu/myNEU/tools/forms.aspx?mode=coop',
+						frame: true
+					},
+
+					'Co-op FAQ': {
+						url: 'http://neubos3es100.nunet.neu.edu/myNEU/coop/faq.aspx',
+						frame: true
+					},
+
+					'Find an Internship': {
+						url: 'http://www.northeastern.edu/careerservices/internships/index.html',
+						frame: true
+					},
+
+					'Husky Career Link': {
+						url: 'http://northeastern.experience.com/er/security/login.jsp',
+						frame: true
+					},
+					'Career Search': {
+						url: 'http://northeastern.experience.com/er/security/login.jsp',
+						frame: true
+					}
+				}
+
+
+			}	
+
+		}
+};
+links['Residence/Housing'] = {
+		id: '',
+		subcategories: {
+			'Room and Board': {
+				id: 'residence_roomboard',
+				links: {
+					'Housing On-Line': {
+						url: 'https://rms.neu.edu/',
+						frame: true
+					},
+					'Meal Plan Changes': {
+						url: 'https://bnr8ssbp.neu.edu/udcprod8/bzskoacc.p_selmp',
+						frame: true
+					},
+
+					'Profiler Meal Plan Changes': {
+						url: 'https://bnr8ssbp.neu.edu/udcprod8/bzskoacc.p_ppinfo',
+						frame: true
+					},
+					'On-Campus Mailbox Information': {
+						url: 'https://prod-web.neu.edu/webapp6/resmailbox/',
+						frame: true
+					},
+					'Dining Services': {
+						url: 'http://www.nudining.com/',
+						frame: true
+					}
+				}
+			},
+			'Informational Links': {
+				id: 'residence_informational',
+				links: {
+					'Apply for Parking': {
+						url: 'https://prod-web.neu.edu/webapp6/nuparking/SignupAuth.do',
+						frame: true
+					},
+					'Facilities Online Work Request': {
+						url: 'https://workreq.neu.edu/workrequest/',
+						frame: true
+					},
+
+					'Husky Express': {
+						url: 'https://workreq.neu.edu/workrequest/',
+						frame: true
+					},
+					'LaundryView': {
+						url: 'http://www.laundryview.com/lvs.php',
+						frame: true
+					}
+				}
+			},
+			'Campus Doings': {
+				id: 'residence_doings',
+				links: {
+					'Campus Calendar': {
+						url: 'http://www.northeastern.edu/studentlife/calendar/',
+						frame: true
+					},
+					'Council for University Programs': {
+						url: 'http://www.cup.neu.edu/',
+						frame: true
+					},
+
+					'Resident Student Association': {
+						url: 'http://www.rsa.neu.edu/wordpress/',
+						frame: true
+					},
+					'Student Government Association': {
+						url: 'http://www.sga.neu.edu/',
+						frame: true
+					},
+					'WRBB Campus Radio': {
+						url: 'http://wrbbradio.org/',
+						frame: true
+					}
 				}
 			}
 		}
-	},
 };
-links['Co-op and Career Services'] = {
+links['Finance'] = {
+		id: '',
+		subcategories: {
+			'Financial Aid': {
+				id: 'finance_finaid',
+				links: {
+					'My Financial Aid Status': {
+						url: 'https://www.pfw.neu.edu/NetPartnerStudent/',
+						frame: true
+					},
+					'Federal Loan Entrance Interview': {
+						url: 'https://studentloans.gov/myDirectLoan/index.action',
+						frame: true
+					},
 
-	'Co-op': {
-		'Getting Started': {
-				url: 'http://neubos3es100.nunet.neu.edu/myNEU/coop/gettingStarted.aspx',
-				frame: true
-		},
-		'COOL': {
-				url: 'https://www.cool.neu.edu/students/mainmenu.aspx',
-				frame: true
-		},
+					'Endowed Scholarship Application': {
+						url: 'https://prod-web.neu.edu/webapp6/EndowedScholarship/secure/index.jsp',
+						frame: true
+					}
+				}
+			},
+			'My Account': {
+				id: 'finance_account',
+				links: {
+					'HuskyCard Balances': {
+						url: 'https://prod-web.neu.edu/webapp6/HuskyCard/CurrentBalance/secure/retrieve/main.do',
+						frame: true
+					},
+					'HuskyCard Transactions': {
+						url: 'https://prod-web.neu.edu/webapp6/ISF/cardTxns.do',
+						frame: true
+					},
+					'Student Account': {
+						url: 'https://bnr8ssbp.neu.edu/udcprod8/twbkwbis.P_GenMenu?name=bmenu.P_ARMnu',
+						frame: true
+					},
+					'Make a Payment': {
+						url: 'https://commerce.cashnet.com/cashnetc/selfserve/youraccount.aspx',
+						frame: true
+					},
 
-		'COOL Tour': {
-				url: 'http://www.coolquicktour.neu.edu/',
-				frame: true
+					'Waive Health Insurance': {
+						url: 'https://prod-web.neu.edu/webapp6/bn/HealthWaiver/initial.do',
+						frame: true
+					},
+					'Student Refund Request': {
+						url: 'https://neuforms2.neu.edu/lfserver/nuloform/studentrefund',
+						frame: true
+					}
+				}
+			},
+			'Ways to Save': {
+				id: 'finance_waystosave',
+				links: {
+					'Zipcar at NU': {
+						url: 'http://www.zipcar.com/northeastern/',
+						frame: true
+					},
+					'Comcast Advantage Program': {
+						url: 'http://www.comcast.com/neusignup/',
+						frame: true
+					},
+
+					'Comcast Advantage Program Form': {
+						url: 'http://myneu.neu.edu/tag.2736ec18fe7f48ab.render.userLayoutRootNode.target.u49l1n137.uP?cw_inChannelLink=1&cw_xml=http://www.comcast-ne.com/nuspecialoffer',
+						frame: true
+					},
+					'NU Apple Store': {
+						url: 'https://prod-web.neu.edu/webapp6/NuRedirects/appleJump.html',
+						frame: true
+					},
+					'NU Dell Store': {
+						url: 'https://prod-web.neu.edu/webapp6/NuRedirects/redirect.jsp?store=dell_student',
+						frame: true
+					},
+
+					'Free and Discounted Software': {
+						url: 'http://neu.e-academy.com',
+						frame: true
+					}
+				}
+			}
 		}
-	},
-
-	'Advising': {
-		'Appointment Calendar': {
-				url: 'https://prod-web.neu.edu/webapp6/public/calendar/booking/app/secure/main.action?',
-				frame: true
-		},
-		
-		'Contacts': {
-				url: 'http://neubos3es100.nunet.neu.edu/myNEU/tools/contacts.aspx?mode=coop',
-				frame: true
-		},
-		
-		'Decide on a Career or Major': {
-				url: 'http://www.northeastern.edu/careerservices/majorscareers/index.html',
-				frame: true
-		},
-		
-		'Resume Services': {
-				url: 'http://www.northeastern.edu/careerservices/resumes/resumes.html',
-				frame: true
-		},
-
-		'Cover Letter Critique': {
-				url: 'http://www.northeastern.edu/careerservices/resumes/coverletters.html',
-				frame: true
-		},
-		'Mock Interviews': {
-				url: 'http://www.northeastern.edu/careerservices/jobsearch/interviewing.html',
-				frame: true
-		},
-		'Job Search Guidance': {
-				url: 'http://www.northeastern.edu/careerservices/jobsearch/index.html',
-				frame: true
-		}
-
-
-	},
-
-
-	'Resources': {
-		'Co-op Forms': {
-				url: 'http://neubos3es100.nunet.neu.edu/myNEU/tools/forms.aspx?mode=coop',
-				frame: true
-		},
-		
-		'Co-op FAQ': {
-				url: 'http://neubos3es100.nunet.neu.edu/myNEU/coop/faq.aspx',
-				frame: true
-		},
-		
-		'Find an Internship': {
-				url: 'http://www.northeastern.edu/careerservices/internships/index.html',
-				frame: true
-		},
-		
-		'Husky Career Link': {
-				url: 'http://northeastern.experience.com/er/security/login.jsp',
-				frame: true
-		},
-		'Career Search': {
-				url: 'http://northeastern.experience.com/er/security/login.jsp',
-				frame: true
-		}
-
-		
-	}	
-		
-}
-links['Residence/Housing'] = {
-	'Room and Board': {
-		'Housing On-Line': {
-				url: 'https://rms.neu.edu/',
-				frame: true
-		},
-		'Meal Plan Changes': {
-				url: 'https://bnr8ssbp.neu.edu/udcprod8/bzskoacc.p_selmp',
-				frame: true
-		},
-
-		'Profiler Meal Plan Changes': {
-				url: 'https://bnr8ssbp.neu.edu/udcprod8/bzskoacc.p_ppinfo',
-				frame: true
-		},
-		'On-Campus Mailbox Information': {
-				url: 'https://prod-web.neu.edu/webapp6/resmailbox/',
-				frame: true
-		},
-		'Dining Services': {
-				url: 'http://www.nudining.com/',
-				frame: true
-		}
-	},
-	'Informational Links': {
-		'Apply for Parking': {
-				url: 'https://prod-web.neu.edu/webapp6/nuparking/SignupAuth.do',
-				frame: true
-		},
-		'Facilities Online Work Request': {
-				url: 'https://workreq.neu.edu/workrequest/',
-				frame: true
-		},
-
-		'Husky Express': {
-				url: 'https://workreq.neu.edu/workrequest/',
-				frame: true
-		},
-		'LaundryView': {
-				url: 'http://www.laundryview.com/lvs.php',
-				frame: true
-		}
-	},
-	'Campus Doings': {
-		'Campus Calendar': {
-				url: 'http://www.northeastern.edu/studentlife/calendar/',
-				frame: true
-		},
-		'Council for University Programs': {
-				url: 'http://www.cup.neu.edu/',
-				frame: true
-		},
-
-		'Resident Student Association': {
-				url: 'http://www.rsa.neu.edu/wordpress/',
-				frame: true
-		},
-		'Student Government Association': {
-				url: 'http://www.sga.neu.edu/',
-				frame: true
-		},
-		'WRBB Campus Radio': {
-				url: 'http://wrbbradio.org/',
-				frame: true
-		}
-	}
+};
 
 
 
 
-}
 
 /*
 Categories to be done:
@@ -322,7 +459,7 @@ Finance
 Calendars
 University Links
 Settings
-*/
+ */
 
 /* Author: Eric Kelly
 
@@ -336,9 +473,9 @@ Categorize links more
 STYLING!!!
 Hover Menu?
 
-*/
+ */
 
-// Opens a link
+//Opens a link
 function openinframe(url, title) {
 	console.log("Opening link " + title + ": " + url);
 	var category = $('#title').text();
@@ -356,14 +493,14 @@ function openinframe(url, title) {
 	});
 }
 
-// Closes an open link
+//Closes an open link
 function close(title) {
 	$('#content-frame').fadeOut();
 	$('#back').fadeOut();
 	$('#title').text(title);
 }
 
-// Called when a category is selected
+//Called when a category is selected
 function catSelect(cat) {
 	// Fetch html from server?
 	/*
@@ -420,30 +557,7 @@ function jsonToLinks(data, category) {
 	
 }
 	
-/*	
-	
-		lnks += "<h3 id='"+ links[cat][subcat].id + "'>"+subcat+"</h3>";
-		for(name in links[cat][subcat]) {
-			if(name !== 'id') {
-				lnks += '<li class="tile"><a href="' + links[cat][subcat][name].url + '" class="image-container';
-				if(!links[cat][subcat][name].frame) {
-					lnks += ' noiframe';
-				}
-				lnks += '"><img src="';
-				if(typeof(links[cat][subcat][name].img) == 'undefined') {
-					lnks += default_image;
-				} else {
-					lnks += links[cat][subcat][name].img;
-				}
-				lnks += '"></a><a href="' + links[cat][subcat][name].url + '" class="name">' + name + '</a></li>';
-			}
-		}
-	}
-}
-
-*/
-
-// Scroll to the given subcategory
+//Scroll to the given subcategory
 function subcatSelect(cat) {
 	window.location.hash = cat;
 }
@@ -463,9 +577,9 @@ function scrollSubheading() {
 		}
 	}
 }
-*/
+ */
 
-// Sets up click & scroll handlers
+//Sets up click & scroll handlers
 $('#content-wrapper a').live('click', function(event) {
 	console.log($(this).text() + " link clicked");
 	event.preventDefault();
