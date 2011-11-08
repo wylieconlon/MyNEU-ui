@@ -2,13 +2,18 @@ default_image = 'img/default.png'; // 200 * 160
 
 links = {};
 links['Home'] = {
-	'Popular Links': {
-	/*
+
+	id: '',
+
+	links: {
+		
+		id: '',
+	
 		'Husky Card Account Balances': {
 			url: 'https://prod-web.neu.edu/webapp6/HuskyCard/CurrentBalance/secure/retrieve/main.do',
 			frame: true
 		},
-	*/
+		
 		'LaundryView': {
 			url: 'http://www.laundryview.com/lvs.php',
 			frame: true
@@ -27,73 +32,70 @@ links['Home'] = {
 }
 links['Classes'] = {
 
-	'Registrar': {
+	id: '',
 	
-		id: 'classes_registrar',
+	subcategories: {
 	
-		'Student Self Service': {
-			url: 'https://bnr8ssbp.neu.edu/udcprod8/twbkwbis.P_GenMenu?name=bmenu.P_StuMainMnu',
-			frame: true
-		},
-	
-		'Course Catalog': {
-			url: 'https://bnr8ssbp.neu.edu/udcprod8/bwckctlg.p_disp_dyn_ctlg',
-			frame: true
-		},
-	
-		'Schedule of Classes': {
-			url: 'https://bnr8ssbp.neu.edu/udcprod8/NEUCLSS.p_disp_dyn_sched',
-			frame: true
-		},
-	
-		'Course Registration': {
-			url: 'https://bnr8ssbp.neu.edu/udcprod8/twbkwbis.P_GenMenu?name=bmenu.P_RegMnu',
-			frame: true
-		},
-	
-		'My Schedule': {
-			url: 'https://bnr8ssbp.neu.edu/udcprod8/bwskfshd.P_CrseSchdDetl',
-			frame: true
-		},
-	
-		'My Grades': {
-			url: 'https://bnr8ssbp.neu.edu/udcprod8/bwskfshd.P_CrseSchdDetl',
-			frame: true
-		},
+		id: '',
 		
-		'My Transcript': {
-			url: 'https://bnr8ssbp.neu.edu/udcprod8/bwskotrn.P_ViewTermTran',
-			frame: true
-		},
-		
-		'My Degree Audit': {
-			url: 'https://prod-web.neu.edu/webapp6/DARSStudent/ChooseSystem',
-			frame: true
-		},
-		
-		'My Transcript': {
-			url: 'https://bnr8ssbp.neu.edu/udcprod8/bwskotrn.P_ViewTermTran',
-			frame: true
-		},
-		
-		'Change of Address': {
-			url: 'https://prod-web.neu.edu/webapp6/bn/iah/secure/address/main.do',
-			frame: true
-		},
+		'Registrar': {
 	
-		'Emergency Contact Information': {
-			url: 'https://prod-web.neu.edu/webapp6/EmergencyContact/secure/index.jsp',
-			frame: true
-		},
-	
-		'FERPA Status': {
-			url: 'https://bnr8ssbp.neu.edu/udcprod8/NEUFERPA.p_display_ferpa',
-			frame: true
-		},
-		
-		'My Travel Plans': {
-			url: 'https://neuforms2.neu.edu/lfserver/Travel_Entry',
-			frame: true
+			id: 'classes_registrar',
+			
+			links: {
+				'Student Self Service': {
+					url: 'https://bnr8ssbp.neu.edu/udcprod8/twbkwbis.P_GenMenu?name=bmenu.P_StuMainMnu',
+					frame: true
+				},
+				'Course Catalog': {
+					url: 'https://bnr8ssbp.neu.edu/udcprod8/bwckctlg.p_disp_dyn_ctlg',
+					frame: true
+				},
+				'Schedule of Classes': {
+					url: 'https://bnr8ssbp.neu.edu/udcprod8/NEUCLSS.p_disp_dyn_sched',
+					frame: true
+				},
+				'Course Registration': {
+					url: 'https://bnr8ssbp.neu.edu/udcprod8/twbkwbis.P_GenMenu?name=bmenu.P_RegMnu',
+					frame: true
+				},
+				'My Schedule': {
+					url: 'https://bnr8ssbp.neu.edu/udcprod8/bwskfshd.P_CrseSchdDetl',
+					frame: true
+				},
+				'My Grades': {
+					url: 'https://bnr8ssbp.neu.edu/udcprod8/bwskfshd.P_CrseSchdDetl',
+					frame: true
+				},				
+				'My Transcript': {
+					url: 'https://bnr8ssbp.neu.edu/udcprod8/bwskotrn.P_ViewTermTran',
+					frame: true
+				},
+				'My Degree Audit': {
+					url: 'https://prod-web.neu.edu/webapp6/DARSStudent/ChooseSystem',
+					frame: true
+				},
+				'My Transcript': {
+					url: 'https://bnr8ssbp.neu.edu/udcprod8/bwskotrn.P_ViewTermTran',
+					frame: true
+				},
+				'Change of Address': {
+					url: 'https://prod-web.neu.edu/webapp6/bn/iah/secure/address/main.do',
+					frame: true
+				},
+				'Emergency Contact Information': {
+					url: 'https://prod-web.neu.edu/webapp6/EmergencyContact/secure/index.jsp',
+					frame: true
+				},
+				'FERPA Status': {
+					url: 'https://bnr8ssbp.neu.edu/udcprod8/NEUFERPA.p_display_ferpa',
+					frame: true
+				},
+				'My Travel Plans': {
+					url: 'https://neuforms2.neu.edu/lfserver/Travel_Entry',
+					frame: true
+				}	
+			}
 		}
 	},
 
