@@ -377,130 +377,113 @@ Hover Menu?
 
 				 */
 
-//				Opens a link
-				function openinframe(url, title) {
-					console.log("Opening link " + title + ": " + url);
-					var category = $('#title').text();
-					// Load url into iframe
-					$('#content-frame').attr('src', url);
-					//window.frames['content-frame'].location.reload();
-					// Fade in content
-					$('#content-frame').fadeIn();
-					// Change title
-					$('#title').text(title);
-					// Set back button behavior
-					$('#back').fadeIn();
-					$('#back').click(function() {
-						close(category);
-					});
-				}
-
-//				Closes an open link
-				function close(title) {
-					$('#content-frame').fadeOut();
-					$('#back').fadeOut();
-					$('#title').text(title);
-				}
-
-//				Called when a category is selected
-				function catSelect(cat) {
-					// Fetch html from server?
-					/*
-	$.get('http://myneu-improved/?fetch='+cat, function(data) {
-		$('#content-links').html(data);
+// Opens a link
+function openinframe(url, title) {
+	console.log("Opening link " + title + ": " + url);
+	var category = $('#title').text();
+	// Load url into iframe
+	$('#content-frame').attr('src', url);
+	//window.frames['content-frame'].location.reload();
+	// Fade in content
+	$('#content-frame').fadeIn();
+	// Change title
+	$('#title').text(title);
+	// Set back button behavior
+	$('#back').fadeIn();
+	$('#back').click(function() {
+		close(category);
 	});
-					 */
-					$('#content-links').html(jsonToLinks(links[cat], cat));
-				}
+}
 
-				function parse(links) {
-					var lhtml = '';
-					for(l in links) {
-						lhtml += '<li class="tile"><a href="' + links[l].url + '" class="image-container';
-						if(links[l].noframe) { lhtml += ' noiframe'; };
-						lhtml += '"><img src="';
-						links[l].img ? lhtml += links[l].img : lhmtl += default_image;
-						lhtml += '"></a><a href="' + links[l].url + '" class="name">' + l + '</a></li>';
-					}
-					return lhtml;
-				}
+// Closes an open link
+function close(title) {
+	$('#content-frame').fadeOut();
+	$('#back').fadeOut();
+	$('#title').text(title);
+}
+
+// Called when a category is selected
+function catSelect(cat) {
+	// Fetch html from server?
+	/*
+$.get('http://myneu-improved/?fetch='+cat, function(data) {
+$('#content-links').html(data);
+});
+	 */
+	$('#content-links').html(jsonToLinks(links[cat], cat));
+}
+
+function parse(links) {
+	var lhtml = '';
+	for(l in links) {
+		lhtml += '<li class="tile"><a href="' + links[l].url + '" class="image-container';
+		if(links[l].noframe) { lhtml += ' noiframe'; };
+		lhtml += '"><img src="';
+		links[l].img ? lhtml += links[l].img : lhmtl += default_image;
+		lhtml += '"></a><a href="' + links[l].url + '" class="name">' + l + '</a></li>';
+	}
+	return lhtml;
+}
 
 
-				function jsonToLinks(data, category) {
-					var lnks = '',
-					ls = '',
-					subs = '',
-					subheading = '',
-					id = '';
+function jsonToLinks(data, category) {
+	var lnks = '',
+	ls = '',
+	subs = '',
+	subheading = '',
+	id = '';
 
-					for(subcat in data) {
-						switch(subcat) {
-						case 'id':
-							if(data.id != '') {
-								subheading = "<h3 id='"+ data.id + "'>"+category+"</h3>";
-							}
-							break;
-						case 'links':
-							ls = parse(data.links);
-							break;
-						case 'subcategories':
-							for(sub in data.subcategories) {
-								subs += jsonToLinks(data.subcategories[sub], sub);
-							}
-							break;
-						default:
-							break;
-						}
-					}
-
-					lnks += subheading + ls + subs;
-
-					return lnks;
-
-				}
-
-//				Scroll to the given subcategory
-				function subcatSelect(cat) {
-					window.location.hash = cat;
-				}
-
-				/*
-// Detects when a heading reaches the top of the page
-// And marks it active in the sidebar
-function scrollSubheading() {
-	var scrollPos = window.scrollTop,
-		subheadings = $('#content-wrapper .subheading'),
-		subcategory;
-
-	for(var i = 0, l = subheadings.length; i < l; i++) {
-		if(scrollPos < subheadings[i].offsetTop) {
-			subcategory = subheadings[i-1].id;
+	for(subcat in data) {
+		switch(subcat) {
+		case 'id':
+			if(data.id != '') {
+				subheading = "<h3 id='"+ data.id + "'>"+category+"</h3>";
+			}
+			break;
+		case 'links':
+			ls = parse(data.links);
+			break;
+		case 'subcategories':
+			for(sub in data.subcategories) {
+				subs += jsonToLinks(data.subcategories[sub], sub);
+			}
+			break;
+		default:
 			break;
 		}
 	}
+
+	lnks += subheading + ls + subs;
+
+	return lnks;
+
 }
-				 */
 
-//				Sets up click & scroll handlers
-				$('#content-wrapper a').live('click', function(event) {
-					console.log($(this).text() + " link clicked");
-					event.preventDefault();
-					if($(this).hasClass('noiframe')) {
-						window.open($(this).attr('href'));
-					} else {
-						openinframe($(this).attr('href'), $(this).text());
-					}
-				});
+// Scroll to the given subcategory
+function subcatSelect(cat) {
+	window.location.hash = cat;
+}
 
-				$('#menu a').click(function() {
-					window.location.hash = '';
-					if($(this).parent().parent().hasClass('acitem')) {
-						subcatSelect($(this).attr('href'));
-					} else {
-						$('#title').text($(this).text());
-						catSelect($(this).text());
-					}
-				});
+// Sets up click & scroll handlers
+$('#content-wrapper a').live('click', function(event) {
+	console.log($(this).text() + " link clicked");
+	event.preventDefault();
+	if($(this).hasClass('noiframe')) {
+		window.open($(this).attr('href'));
+	} else {
+		openinframe($(this).attr('href'), $(this).text());
+	}
+});
 
-//				$('#content-links').scroll(scrollSubheading);
-				$(function() {$('#home').click();});
+$('#menu a').click(function() {
+	window.location.hash = '';
+	if($(this).parent().parent().hasClass('acitem')) {
+		subcatSelect($(this).attr('href'));
+	} else {
+		$('#title').text($(this).text());
+		catSelect($(this).text());
+	}
+});
+
+// $('#content-links').scroll(scrollSubheading);
+$(function() {$('#home').click();});
