@@ -6,27 +6,18 @@ links['Home'] = {
 	id: '',
 
 	links: {
-		
-		id: '',
-	
 		'Husky Card Account Balances': {
 			url: 'https://prod-web.neu.edu/webapp6/HuskyCard/CurrentBalance/secure/retrieve/main.do',
-			frame: true
 		},
-		
 		'LaundryView': {
 			url: 'http://www.laundryview.com/lvs.php',
-			frame: true
 		},
-
 		'Course Information and Registration': {
 			url: 'https://bnr8ssbp.neu.edu/udcprod8/twbkwbis.P_GenMenu?name=bmenu.P_RegMnu',
-			frame: true
 		},
-		
 		'Husky Mail': {
 			url: 'http://mail.husky.neu.edu/',
-			frame: false
+			noframe: true
 		}
 	}
 }
@@ -35,8 +26,6 @@ links['Classes'] = {
 	id: '',
 	
 	subcategories: {
-	
-		id: '',
 		
 		'Registrar': {
 	
@@ -382,8 +371,57 @@ function catSelect(cat) {
 		$('#content-links').html(data);
 	});
 	*/
-	var lnks = '';
-	for(subcat in links[cat]) {
+	$('#content-links').html(jsonToLinks(links[cat], cat));
+}
+
+function parse(links) {
+	var lhtml = '';
+	for(l in links) {
+		lhtml += '<li class="tile"><a href="' + links[l].url + '" class="image-container';
+		if(links[l].noframe) { lhtml += ' noiframe'; };
+		lhtml += '"><img src="';
+		links[l].img ? lhtml += links[l].img : lhmtl += default_image;
+		lhtml += '"></a><a href="' + links[l].url + '" class="name">' + l + '</a></li>';
+	}
+	return lhtml;
+}
+
+
+function jsonToLinks(data, category) {
+	var lnks = '',
+		ls = '',
+		subs = '',
+		subheading = '',
+		id = '';
+		
+	for(subcat in data) {
+		switch(subcat) {
+			case 'id':
+				if(data.id != '') {
+					subheading = "<h3 id='"+ data.id + "'>"+category+"</h3>";
+				}
+				break;
+			case 'links':
+				ls = parse(data.links);
+				break;
+			case 'subcategories':
+				for(sub in data.subcategories) {
+					subs += jsonToLinks(data.subcategories[sub], sub);
+				}
+				break;
+			default:
+				break;
+		}
+	}
+	
+	lnks += subheading + ls + subs;
+	
+	return lnks;
+	
+}
+	
+/*	
+	
 		lnks += "<h3 id='"+ links[cat][subcat].id + "'>"+subcat+"</h3>";
 		for(name in links[cat][subcat]) {
 			if(name !== 'id') {
@@ -401,8 +439,9 @@ function catSelect(cat) {
 			}
 		}
 	}
-	$('#content-links').html(lnks);
 }
+
+*/
 
 // Scroll to the given subcategory
 function subcatSelect(cat) {
