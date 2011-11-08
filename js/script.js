@@ -96,63 +96,59 @@ links['Classes'] = {
 					frame: true
 				}	
 			}
+		},
+		
+		'Study and Course Resources': {
+	
+			id: 'classes_resources',
+			
+			links: {
+				'Advisor Appointment Calendar': {
+					url: 'https://prod-web.neu.edu/webapp6/public/calendar/booking/app/secure/main.action?',
+					frame: true
+				},
+				'Request a Tutor': {
+					url: 'https://neuforms2.neu.edu/lfserver/library_peer_tutor_request',
+					frame: true
+				},
+				'Advisor Appointment Calendar': {
+					url: 'https://prod-web.neu.edu/webapp6/public/calendar/booking/app/secure/main.action?',
+					frame: true
+				},
+				'myTRACE': {
+					url: 'http://myneu.neu.edu/cp/ip/login?sys=trace&url=https://ce7.connectedu.net/etw/crseval.asp?i=8',
+					frame: true
+				},
+				'CPS Class Evaluation Results': {
+					url: 'http://neu.evaluationkit.com/MyEval/StudentReport.aspx',
+					frame: true
+				},
+				'Bookstore': {
+					url: 'http://northeastern.bncollege.com/webapp/wcs/stores/servlet/BNCBHomePage?storeId=17555&catalogId=10001',
+					frame: true
+				}
+			}
+		},
+		'Commencement': {
+		
+			id: 'classes_commencement',
+			
+			links: {
+				'Apply to Graduate': {
+					url: 'https://bnr8ssbp.neu.edu/udcprod8/bwskgrad.p_disp_gradapp',
+					frame: true
+				},
+				'View Application to Graduate': {
+					url: 'https://bnr8ssbp.neu.edu/udcprod8/bwskgrad.p_view_gradapp',
+					frame: true
+				},
+				'NU Commencement Website': {
+					url: 'http://www.northeastern.edu/commencement/',
+					frame: true
+				}
+			}
 		}
 	},
-
-	'Study and Course Resources': {
-	
-		id: 'classes_resources',
-	
-		'Advisor Appointment Calendar': {
-			url: 'https://prod-web.neu.edu/webapp6/public/calendar/booking/app/secure/main.action?',
-			frame: true
-		},
-		
-		'Request a Tutor': {
-			url: 'https://neuforms2.neu.edu/lfserver/library_peer_tutor_request',
-			frame: true
-		},
-		
-		'Advisor Appointment Calendar': {
-			url: 'https://prod-web.neu.edu/webapp6/public/calendar/booking/app/secure/main.action?',
-			frame: true
-		},
-		
-		'myTRACE': {
-			url: 'http://myneu.neu.edu/cp/ip/login?sys=trace&url=https://ce7.connectedu.net/etw/crseval.asp?i=8',
-			frame: true
-		},
-		
-		'CPS Class Evaluation Results': {
-			url: 'http://neu.evaluationkit.com/MyEval/StudentReport.aspx',
-			frame: true
-		},
-		
-		'Bookstore': {
-			url: 'http://northeastern.bncollege.com/webapp/wcs/stores/servlet/BNCBHomePage?storeId=17555&catalogId=10001',
-			frame: true
-		}
-	},
-
-	'Commencement': {
-	
-		id: 'classes_commencement',
-	
-		'Apply to Graduate': {
-			url: 'https://bnr8ssbp.neu.edu/udcprod8/bwskgrad.p_disp_gradapp',
-			frame: true
-		},
-		
-		'View Application to Graduate': {
-			url: 'https://bnr8ssbp.neu.edu/udcprod8/bwskgrad.p_view_gradapp',
-			frame: true
-		},
-		
-		'NU Commencement Website': {
-			url: 'http://www.northeastern.edu/commencement/',
-			frame: true
-		}
-	}
 };
 links['Co-op and Career Services'] = {
 
