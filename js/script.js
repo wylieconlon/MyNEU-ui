@@ -7,8 +7,6 @@ links['Home'] = {
 
 		links: {
 
-			id: '',
-
 			'Husky Card Account Balances': {
 				url: 'https://prod-web.neu.edu/webapp6/HuskyCard/CurrentBalance/secure/retrieve/main.do',
 				frame: true
@@ -35,8 +33,6 @@ links['Classes'] = {
 		id: '',
 
 		subcategories: {
-
-			id: '',
 
 			'Registrar': {
 
@@ -153,7 +149,6 @@ links['Classes'] = {
 links['Co-op and Career Services'] = {
 		id: '',
 		subcategories: {
-			id: '',
 			'Co-op': {
 				id: 'coop_coop',
 				links: {
@@ -250,7 +245,6 @@ links['Co-op and Career Services'] = {
 links['Residence/Housing'] = {
 		id: '',
 		subcategories: {
-			id: '',
 			'Room and Board': {
 				id: 'residence_roomboard',
 				links: {
@@ -327,13 +321,96 @@ links['Residence/Housing'] = {
 			}
 		}
 };
+links['Finance'] = {
+		id: '',
+		subcategories: {
+			'Financial Aid': {
+				id: 'finance_finaid',
+				links: {
+					'My Financial Aid Status': {
+						url: 'https://www.pfw.neu.edu/NetPartnerStudent/',
+						frame: true
+					},
+					'Federal Loan Entrance Interview': {
+						url: 'https://studentloans.gov/myDirectLoan/index.action',
+						frame: true
+					},
+
+					'Endowed Scholarship Application': {
+						url: 'https://prod-web.neu.edu/webapp6/EndowedScholarship/secure/index.jsp',
+						frame: true
+					}
+				}
+			},
+			'My Account': {
+				id: 'finance_account',
+				links: {
+					'HuskyCard Balances': {
+						url: 'https://prod-web.neu.edu/webapp6/HuskyCard/CurrentBalance/secure/retrieve/main.do',
+						frame: true
+					},
+					'HuskyCard Transactions': {
+						url: 'https://prod-web.neu.edu/webapp6/ISF/cardTxns.do',
+						frame: true
+					},
+					'Student Account': {
+						url: 'https://bnr8ssbp.neu.edu/udcprod8/twbkwbis.P_GenMenu?name=bmenu.P_ARMnu',
+						frame: true
+					},
+					'Make a Payment': {
+						url: 'https://commerce.cashnet.com/cashnetc/selfserve/youraccount.aspx',
+						frame: true
+					},
+
+					'Waive Health Insurance': {
+						url: 'https://prod-web.neu.edu/webapp6/bn/HealthWaiver/initial.do',
+						frame: true
+					},
+					'Student Refund Request': {
+						url: 'https://neuforms2.neu.edu/lfserver/nuloform/studentrefund',
+						frame: true
+					}
+				}
+			},
+			'Ways to Save': {
+				id: 'finance_waystosave',
+				links: {
+					'Zipcar at NU': {
+						url: 'http://www.zipcar.com/northeastern/',
+						frame: true
+					},
+					'Comcast Advantage Program': {
+						url: 'http://www.comcast.com/neusignup/',
+						frame: true
+					},
+
+					'Comcast Advantage Program Form': {
+						url: 'http://myneu.neu.edu/tag.2736ec18fe7f48ab.render.userLayoutRootNode.target.u49l1n137.uP?cw_inChannelLink=1&cw_xml=http://www.comcast-ne.com/nuspecialoffer',
+						frame: true
+					},
+					'NU Apple Store': {
+						url: 'https://prod-web.neu.edu/webapp6/NuRedirects/appleJump.html',
+						frame: true
+					},
+					'NU Dell Store': {
+						url: 'https://prod-web.neu.edu/webapp6/NuRedirects/redirect.jsp?store=dell_student',
+						frame: true
+					},
+
+					'Free and Discounted Software': {
+						url: 'http://neu.e-academy.com',
+						frame: true
+					}
+				}
+			}
+		}
+};
 
 
 
 
-			
 
-			/*
+/*
 Categories to be done:
 
 Home
@@ -359,9 +436,9 @@ Finance
 Calendars
 University Links
 Settings
-			 */
+ */
 
-			/* Author: Eric Kelly
+/* Author: Eric Kelly
 
 
 Bugs:
@@ -373,69 +450,69 @@ Categorize links more
 STYLING!!!
 Hover Menu?
 
-			 */
+ */
 
-//			Opens a link
-			function openinframe(url, title) {
-				console.log("Opening link " + title + ": " + url);
-				var category = $('#title').text();
-				// Load url into iframe
-				$('#content-frame').attr('src', url);
-				//window.frames['content-frame'].location.reload();
-				// Fade in content
-				$('#content-frame').fadeIn();
-				// Change title
-				$('#title').text(title);
-				// Set back button behavior
-				$('#back').fadeIn();
-				$('#back').click(function() {
-					close(category);
-				});
-			}
+//Opens a link
+function openinframe(url, title) {
+	console.log("Opening link " + title + ": " + url);
+	var category = $('#title').text();
+	// Load url into iframe
+	$('#content-frame').attr('src', url);
+	//window.frames['content-frame'].location.reload();
+	// Fade in content
+	$('#content-frame').fadeIn();
+	// Change title
+	$('#title').text(title);
+	// Set back button behavior
+	$('#back').fadeIn();
+	$('#back').click(function() {
+		close(category);
+	});
+}
 
-//			Closes an open link
-			function close(title) {
-				$('#content-frame').fadeOut();
-				$('#back').fadeOut();
-				$('#title').text(title);
-			}
+//Closes an open link
+function close(title) {
+	$('#content-frame').fadeOut();
+	$('#back').fadeOut();
+	$('#title').text(title);
+}
 
-//			Called when a category is selected
-			function catSelect(cat) {
-				// Fetch html from server?
-				/*
+//Called when a category is selected
+function catSelect(cat) {
+	// Fetch html from server?
+	/*
 	$.get('http://myneu-improved/?fetch='+cat, function(data) {
 		$('#content-links').html(data);
 	});
-				 */
-				var lnks = '';
-				for(subcat in links[cat]) {
-					lnks += "<h3 id='"+ links[cat][subcat].id + "'>"+subcat+"</h3>";
-					for(name in links[cat][subcat]) {
-						if(name !== 'id') {
-							lnks += '<li class="tile"><a href="' + links[cat][subcat][name].url + '" class="image-container';
-							if(!links[cat][subcat][name].frame) {
-								lnks += ' noiframe';
-							}
-							lnks += '"><img src="';
-							if(typeof(links[cat][subcat][name].img) == 'undefined') {
-								lnks += default_image;
-							} else {
-								lnks += links[cat][subcat][name].img;
-							}
-							lnks += '"></a><a href="' + links[cat][subcat][name].url + '" class="name">' + name + '</a></li>';
-						}
-					}
+	 */
+	var lnks = '';
+	for(subcat in links[cat]) {
+		lnks += "<h3 id='"+ links[cat][subcat].id + "'>"+subcat+"</h3>";
+		for(name in links[cat][subcat]) {
+			if(name !== 'id') {
+				lnks += '<li class="tile"><a href="' + links[cat][subcat][name].url + '" class="image-container';
+				if(!links[cat][subcat][name].frame) {
+					lnks += ' noiframe';
 				}
-				$('#content-links').html(lnks);
+				lnks += '"><img src="';
+				if(typeof(links[cat][subcat][name].img) == 'undefined') {
+					lnks += default_image;
+				} else {
+					lnks += links[cat][subcat][name].img;
+				}
+				lnks += '"></a><a href="' + links[cat][subcat][name].url + '" class="name">' + name + '</a></li>';
 			}
+		}
+	}
+	$('#content-links').html(lnks);
+}
 
-//			Scroll to the given subcategory
-			function subcatSelect(cat) {
-				window.location.hash = cat;
-			}
+//Scroll to the given subcategory
+function subcatSelect(cat) {
+	window.location.hash = cat;
+}
 
-			/*
+/*
 // Detects when a heading reaches the top of the page
 // And marks it active in the sidebar
 function scrollSubheading() {
@@ -450,28 +527,28 @@ function scrollSubheading() {
 		}
 	}
 }
-			 */
+ */
 
-//			Sets up click & scroll handlers
-			$('#content-wrapper a').live('click', function(event) {
-				console.log($(this).text() + " link clicked");
-				event.preventDefault();
-				if($(this).hasClass('noiframe')) {
-					window.open($(this).attr('href'));
-				} else {
-					openinframe($(this).attr('href'), $(this).text());
-				}
-			});
+//Sets up click & scroll handlers
+$('#content-wrapper a').live('click', function(event) {
+	console.log($(this).text() + " link clicked");
+	event.preventDefault();
+	if($(this).hasClass('noiframe')) {
+		window.open($(this).attr('href'));
+	} else {
+		openinframe($(this).attr('href'), $(this).text());
+	}
+});
 
-			$('#menu a').click(function() {
-				window.location.hash = '';
-				if($(this).parent().parent().hasClass('acitem')) {
-					subcatSelect($(this).attr('href'));
-				} else {
-					$('#title').text($(this).text());
-					catSelect($(this).text());
-				}
-			});
+$('#menu a').click(function() {
+	window.location.hash = '';
+	if($(this).parent().parent().hasClass('acitem')) {
+		subcatSelect($(this).attr('href'));
+	} else {
+		$('#title').text($(this).text());
+		catSelect($(this).text());
+	}
+});
 
-//			$('#content-links').scroll(scrollSubheading);
-			$(function() {$('#home').click();});
+//$('#content-links').scroll(scrollSubheading);
+$(function() {$('#home').click();});
