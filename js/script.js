@@ -5,15 +5,12 @@ links = {};
 var housinglink = {
 	url: 'https://rms.neu.edu/',
 }
-}
-var mealplanlink = {'Meal Plan Changes': {
+var mealplanlink = {
 	url: 'https://bnr8ssbp.neu.edu/udcprod8/bzskoacc.p_selmp',
 }
-}
 
-var profilerlink = {'Profiler Meal Plan Changes': {
+var profilerlink = {
 	url: 'https://bnr8ssbp.neu.edu/udcprod8/bzskoacc.p_ppinfo',
-}
 }
 
 links['Home'] = {
@@ -419,7 +416,7 @@ function parse(links) {
 		lhtml += '<li class="tile"><a href="' + links[l].url + '" class="image-container';
 		if(links[l].noframe) { lhtml += ' noiframe'; };
 		lhtml += '"><img src="';
-		links[l].img ? lhtml += links[l].img : lhmtl += default_image;
+		links[l].img ? lhtml += links[l].img : lhtml += default_image;
 		lhtml += '"></a><a href="' + links[l].url + '" class="name">' + l + '</a></li>';
 	}
 	return lhtml;
