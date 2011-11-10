@@ -2,7 +2,7 @@ default_image = 'img/default.png'; // 200 * 160
 
 links = {};
 
-var housinglink = {'Housing On-Line': {
+var housinglink = {
 	url: 'https://rms.neu.edu/',
 }
 }
@@ -206,9 +206,9 @@ links['Residence/Housing'] = {
 		'Room and Board': {
 			id: 'residence_roomboard',
 			links: {
-				housinglink,
-				mealplanlink,
-				profilerlink,
+				'Housing On-Line' : housinglink,
+				'Meal Plan Changes' : mealplanlink,
+				'Profiler Meal Plan Changes' : profilerlink,
 
 				'On-Campus Mailbox Information': {
 					url: 'https://prod-web.neu.edu/webapp6/resmailbox/',
@@ -292,9 +292,9 @@ links['Finance'] = {
 				'Make a Payment': {
 					url: 'https://commerce.cashnet.com/cashnetc/selfserve/youraccount.aspx',
 				},
-				housinglink,
-				mealplanlink,
-				profilerlink,
+				'Housing On-Line' : housinglink,
+				'Meal Plan Changes' : mealplanlink,
+				'Profiler Meal Plan Changes' : profilerlink,
 				'Waive Health Insurance': {
 					url: 'https://prod-web.neu.edu/webapp6/bn/HealthWaiver/initial.do',
 				},
