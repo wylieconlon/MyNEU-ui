@@ -90,7 +90,7 @@ links['Classes'] = {
 				'My Degree Audit': {
 					id: 14,
 					url: 'https://prod-web.neu.edu/webapp6/DARSStudent/ChooseSystem',
-					img: 'img/screenshots/my_degree.audit.png'
+					img: 'img/screenshots/my_degree_audit.png'
 				},
 				'My Transcript': {
 					id: 15,
