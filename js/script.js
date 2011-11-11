@@ -1,4 +1,6 @@
 default_image = 'img/default.png'; // 200 * 160
+unsaved = '<img src="img/unsaved.jpeg" class="bookmark" alt="Bookmark">';
+saved = '<img src="img/saved.jpeg" class="bookmark" alt="Bookmarked">';
 
 links = {};
 
@@ -413,15 +415,27 @@ $('#content-links').html(data);
 function parse(links) {
 	var lhtml = '';
 	for(l in links) {
-		lhtml += '<li class="tile"><a href="' + links[l].url + '" class="image-container';
+		lhtml += '<li class="tile">';
+		$.inArray(links[l].id, favorites) == -1 ? lhtml += unsaved : lhtml += saved;
+		lhtml += '<a href="' + links[l].url + '" class="image-container';
 		if(links[l].noframe) { lhtml += ' noiframe'; };
-		lhtml += '"><img src="';
+		lhtml += '" id="' + links[l].id + '" >';
+		lhtml += '<img src="';
 		links[l].img ? lhtml += links[l].img : lhtml += default_image;
 		lhtml += '"></a><a href="' + links[l].url + '" class="name">' + l + '</a></li>';
 	}
 	return lhtml;
 }
 
+function bookmark(id) {
+	var ia = $.inArray(id, favorites);
+	if(ia == -1) {
+		favorites.push(id);
+	} else {
+		favorites.splice(ia, ia);
+	}
+	$.cookie('favorites', favorites.join(), { expires: 365, path: '/' });
+}
 
 function jsonToLinks(data, category) {
 	var lnks = '',
@@ -482,5 +496,12 @@ $('#menu a').click(function() {
 	}
 });
 
+$('.bookmark').click(function() {
+	bookmark($(this).next().attr('id'));
+});
+
 // $('#content-links').scroll(scrollSubheading);
-$(function() {$('#home').click();});
+$(function() {
+	$('#home').click();
+	favorites = $.cookie('favorites');
+});
