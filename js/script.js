@@ -5,17 +5,17 @@ saved = '<img src="img/saved.jpeg" class="bookmark" alt="Bookmarked">';
 links = {};
 
 var housinglink = {
-		id: 0,
-		url: 'https://rms.neu.edu/',
+	id: 0,
+	url: 'https://rms.neu.edu/',
 }
 var mealplanlink = {
-		id: 1,
-		url: 'https://bnr8ssbp.neu.edu/udcprod8/bzskoacc.p_selmp',
+	id: 1,
+	url: 'https://bnr8ssbp.neu.edu/udcprod8/bzskoacc.p_selmp',
 }
 
 var profilerlink = {
-		id: 2,
-		url: 'https://bnr8ssbp.neu.edu/udcprod8/bzskoacc.p_ppinfo',
+	id: 2,
+	url: 'https://bnr8ssbp.neu.edu/udcprod8/bzskoacc.p_ppinfo',
 }
 
 links['Home'] = {
@@ -494,14 +494,16 @@ $.get('http://myneu-improved/?fetch='+cat, function(data) {
 $('#content-links').html(data);
 });
 	 */
-	$('#content-links').html(jsonToLinks(links[cat], cat));
+	$('#content-links').html(jsonToHTML(links[cat], cat));
 }
 
 function parse(links) {
 	var lhtml = '';
 	for(l in links) {
 		lhtml += '<li class="tile">';
-		$.inArray(links[l].id, favorites) == -1 ? lhtml += unsaved : lhtml += saved;
+		if(favorites) {
+			$.inArray(links[l].id, favorites) == -1 ? lhtml += unsaved : lhtml += saved;
+		}
 		lhtml += '<a href="' + links[l].url + '" class="image-container';
 		if(links[l].noframe) { lhtml += ' noiframe'; };
 		lhtml += '" id="' + links[l].id + '" >';
@@ -519,10 +521,10 @@ function bookmark(id) {
 	} else {
 		favorites.splice(ia, ia);
 	}
-	$.cookie('favorites', favorites.join(), { expires: 365, path: '/' });
+	$.cookie('favorites', favorites.join(), { expires: 7 });
 }
 
-function jsonToLinks(data, category) {
+function jsonToHTML(data, category) {
 	var lnks = '',
 	ls = '',
 	subs = '',
@@ -541,7 +543,7 @@ function jsonToLinks(data, category) {
 			break;
 		case 'subcategories':
 			for(sub in data.subcategories) {
-				subs += jsonToLinks(data.subcategories[sub], sub);
+				subs += jsonToHTML(data.subcategories[sub], sub);
 			}
 			break;
 		default:
@@ -552,12 +554,48 @@ function jsonToLinks(data, category) {
 	lnks += subheading + ls + subs;
 
 	return lnks;
+}
 
+function filterLinks(data, id) {
+	for(subcategory in data) {
+		for(subcat in data) {
+			if(subcat == 'links') {
+				for(a in data[subcategory][subcat]) {
+					if(data[subcategory][subcat][a].id == id) {
+						return {
+							name: a,
+							rest: data[subcategory][subcat][a]
+						};
+					}
+				}
+			}
+			if(subcat == 'subcategories') {
+				filterLinks(data[subcategory][subcat], id);
+			}
+		}
+	}
+}
+
+function favs() {
+	var bookmarks = {};
+	for(l in favorites) {
+		var lynk = filterLinks(links, l);
+		bookmarks[lynk.name] = lynk.rest;
+	}
+	jsonToHTML(bookmarks);
 }
 
 // Scroll to the given subcategory
 function subcatSelect(cat) {
 	window.location.hash = cat;
+}
+
+// Get the user's favorites
+favorites = $.cookie('favorites');
+if(favorites) {
+	favorites = favorites.split(",");
+} else {
+	favorites = [];
 }
 
 // Sets up click & scroll handlers
@@ -577,16 +615,24 @@ $('#menu a').click(function() {
 		subcatSelect($(this).attr('href'));
 	} else {
 		$('#title').text($(this).text());
-		catSelect($(this).text());
+		if($(this).text() == 'Favorites') {
+			favs();
+		} else {
+			catSelect($(this).text());
+		}
 	}
 });
 
-$('.bookmark').click(function() {
+$('.bookmark').live('click', function() {
 	bookmark($(this).next().attr('id'));
+	if($(this).attr('src') == 'img/saved.jpeg') {
+		$(this).attr('src', 'img/unsaved.jpeg');
+	} else {
+		$(this).attr('src', 'img/saved.jpeg');
+	}
 });
 
 // $('#content-links').scroll(scrollSubheading);
 $(function() {
 	$('#home').click();
-	favorites = $.cookie('favorites');
 });
