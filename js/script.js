@@ -502,7 +502,7 @@ function parse(links) {
 	for(l in links) {
 		lhtml += '<li class="tile">';
 		if(favorites) {
-			$.inArray(links[l].id, favorites) == -1 ? lhtml += unsaved : lhtml += saved;
+			$.inArray('' + links[l].id, favorites) == -1 ? lhtml += unsaved : lhtml += saved;
 		}
 		lhtml += '<a href="' + links[l].url + '" class="image-container';
 		if(links[l].noframe) { lhtml += ' noiframe'; };
@@ -557,32 +557,44 @@ function jsonToHTML(data, category) {
 }
 
 function filterLinks(data, id) {
+	var subcategory, subcat, a;
 	for(subcategory in data) {
-		for(subcat in data) {
-			if(subcat == 'links') {
-				for(a in data[subcategory][subcat]) {
-					if(data[subcategory][subcat][a].id == id) {
-						return {
-							name: a,
-							rest: data[subcategory][subcat][a]
-						};
+		for(subcat in data[subcategory]) {
+			switch(subcat) {
+				case 'links':
+					for(a in data[subcategory][subcat]) {
+						if(data[subcategory][subcat][a].id == id) {
+							return {
+								name: a,
+								rest: data[subcategory][subcat][a]
+							};
+						}
 					}
-				}
-			}
-			if(subcat == 'subcategories') {
-				filterLinks(data[subcategory][subcat], id);
+					break;
+				case 'subcategories':
+					var result = filterLinks(data[subcategory][subcat], id);
+					if(result) {
+						return result;
+					}
+					break;
+				case 'id':
+					break;
+				default:
+					break;
 			}
 		}
 	}
 }
 
 function favs() {
-	var bookmarks = {};
+	var bookmarks = {
+		links: {}
+	};
 	for(l in favorites) {
-		var lynk = filterLinks(links, l);
-		bookmarks[lynk.name] = lynk.rest;
+		var lynk = filterLinks(links, favorites[l]);
+		bookmarks.links[lynk.name] = lynk.rest;
 	}
-	jsonToHTML(bookmarks);
+	$('#content-links').html(jsonToHTML(bookmarks));
 }
 
 // Scroll to the given subcategory
