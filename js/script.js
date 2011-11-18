@@ -473,7 +473,7 @@ function openinframe(url, title) {
 	// Change title
 	$('#title').text(title);
 	// Set back button behavior
-	$('#back').fadeIn();
+	$('#back').css('visibility', 'visible');
 	$('#back').click(function() {
 		close(category);
 	});
@@ -482,7 +482,7 @@ function openinframe(url, title) {
 // Closes an open link
 function close(title) {
 	$('#content-frame').fadeOut();
-	$('#back').fadeOut();
+	$('#back').css('visibility', 'hidden');
 	$('#title').text(title);
 }
 
