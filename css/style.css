@@ -303,6 +303,7 @@ body {
 
 #content-links li {
 	float: left;
+	position: relative;
 	
 	width: 200px;
 	height: 200px;
@@ -316,10 +317,31 @@ body {
 	-moz-border-radius: 8px;
 	border-radius: 8px;
 }
+	#content-links .bookmark {
+		position: absolute;
+		top: 5px;
+		right: 5px;
+		/*float: right;
+		margin-right: 5px;*/
+		width: 20px;
+		height: 22px;
+		background: url('../img/stars.png') no-repeat;
+		cursor: pointer;
+	}
+	#content-links .bookmark.saved,
+	#content-links .bookmark.unsaved:hover {
+		background-position: -20px 0;
+	}
+	#content-links .bookmark.saved:hover {
+		background-position: 0 0;
+	}
+	
 	#content-links .image-container {
 	}
 	#content-links .name {
 		display: block;
+		position: relative;
+		
 		width: 200px;
 		padding: 10px 0;
 		

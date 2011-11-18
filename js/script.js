@@ -28,17 +28,17 @@ links['Home'] = {
 		'LaundryView': {
 			id: 4,
 			url: 'http://www.laundryview.com/lvs.php',
-			img: 'img/screenshots/laundryview.png'
+			img: 'img/tiles/laundryview.png'
 		},
 		'Course Information and Registration': {
 			id: 5,
 			url: 'https://bnr8ssbp.neu.edu/udcprod8/twbkwbis.P_GenMenu?name=bmenu.P_RegMnu',
-			img: 'img/screenshots/course_information_and_registration.png'
+			img: 'img/tiles/course_information_and_registration.png'
 		},
 		'Husky Mail': {
 			id: 6,
 			url: 'http://mail.husky.neu.edu/',
-			img: 'img/screenshots/huskymail.png',
+			img: 'img/tiles/huskymail.png',
 			noframe: true
 		}
 	}
@@ -55,67 +55,67 @@ links['Classes'] = {
 				'Student Self Service': {
 					id: 7,
 					url: 'https://bnr8ssbp.neu.edu/udcprod8/twbkwbis.P_GenMenu?name=bmenu.P_StuMainMnu',
-					img: 'img/screenshots/student_self_service.png'
+					img: 'img/tiles/student_self_service.png'
 				},
 				'Course Catalog': {
 					id: 8,
 					url: 'https://bnr8ssbp.neu.edu/udcprod8/bwckctlg.p_disp_dyn_ctlg',
-					img: 'img/screenshots/course_catalog.png'
+					img: 'img/tiles/course_catalog.png'
 				},
 				'Schedule of Classes': {
 					id: 9,
 					url: 'https://bnr8ssbp.neu.edu/udcprod8/NEUCLSS.p_disp_dyn_sched',
-					img: 'img/screenshots/schedule_of_classes.png'
+					img: 'img/tiles/schedule_of_classes.png'
 				},
 				'Course Registration': {
 					id: 10,
 					url: 'https://bnr8ssbp.neu.edu/udcprod8/twbkwbis.P_GenMenu?name=bmenu.P_RegMnu',
-					img: 'img/screenshots/course_registration.png'
+					img: 'img/tiles/course_registration.png'
 				},
 				'My Schedule': {
 					id: 11,
 					url: 'https://bnr8ssbp.neu.edu/udcprod8/bwskfshd.P_CrseSchdDetl',
-					img: 'img/screenshots/my_schedule.png'
+					img: 'img/tiles/my_schedule.png'
 				},
 				'My Grades': {
 					id: 12,
 					url: 'https://bnr8ssbp.neu.edu/udcprod8/bwskfshd.P_CrseSchdDetl',
-					img: 'img/screenshots/my_grades.png'
+					img: 'img/tiles/my_grades.png'
 				},				
 				'My Transcript': {
 					id: 13,
 					url: 'https://bnr8ssbp.neu.edu/udcprod8/bwskotrn.P_ViewTermTran',
-					img: 'img/screenshots/my_transcript.png'
+					img: 'img/tiles/my_transcript.png'
 				},
 				'My Degree Audit': {
 					id: 14,
 					url: 'https://prod-web.neu.edu/webapp6/DARSStudent/ChooseSystem',
-					img: 'img/screenshots/my_degree_audit.png'
+					img: 'img/tiles/my_degree_audit.png'
 				},
 				'My Transcript': {
 					id: 15,
 					url: 'https://bnr8ssbp.neu.edu/udcprod8/bwskotrn.P_ViewTermTran',
-					img: 'img/screenshots/my_transcript.png'
+					img: 'img/tiles/my_transcript.png'
 				},
 				'Change of Address': {
 					id: 16,
 					url: 'https://prod-web.neu.edu/webapp6/bn/iah/secure/address/main.do',
-					img: 'img/screenshots/change_of_address.png'
+					img: 'img/tiles/change_of_address.png'
 				},
 				'Emergency Contact Information': {
 					id: 17,
 					url: 'https://prod-web.neu.edu/webapp6/EmergencyContact/secure/index.jsp',
-					img: 'img/screenshots/emergency_contact_information.png'
+					img: 'img/tiles/emergency_contact_information.png'
 				},
 				'FERPA Status': {
 					id: 18,
 					url: 'https://bnr8ssbp.neu.edu/udcprod8/NEUFERPA.p_display_ferpa',
-					img: 'img/screenshots/FERPA_status.png'
+					img: 'img/tiles/FERPA_status.png'
 				},
 				'My Travel Plans': {
 					id: 19,
 					url: 'https://neuforms2.neu.edu/lfserver/Travel_Entry',
-					img: 'img/screenshots/my_travel_plans.png'
+					img: 'img/tiles/my_travel_plans.png'
 				}	
 			}
 		},
@@ -128,27 +128,27 @@ links['Classes'] = {
 				'Advisor Appointment Calendar': {
 					id: 20,
 					url: 'https://prod-web.neu.edu/webapp6/public/calendar/booking/app/secure/main.action?',
-					img: 'img/screenshots/advisor_appointment_calendar.png'
+					img: 'img/tiles/advisor_appointment_calendar.png'
 				},
 				'Request a Tutor': {
 					id: 21,
 					url: 'https://neuforms2.neu.edu/lfserver/library_peer_tutor_request',
-					img: 'img/screenshots/request_a_tutor.png'
+					img: 'img/tiles/request_a_tutor.png'
 				},
 				'myTRACE': {
 					id: 23,
 					url: 'http://myneu.neu.edu/cp/ip/login?sys=trace&url=https://ce7.connectedu.net/etw/crseval.asp?i=8',
-					img: 'img/screenshots/myTRACE.png'
+					img: 'img/tiles/myTRACE.png'
 				},
 				'CPS Class Evaluation Results': {
 					id: 24,
 					url: 'http://neu.evaluationkit.com/MyEval/StudentReport.aspx',
-					img: 'img/screenshots/CPS_class_evaluation_results.png'
+					img: 'img/tiles/CPS_class_evaluation_results.png'
 				},
 				'Bookstore': {
 					id: 25,
 					url: 'http://northeastern.bncollege.com/webapp/wcs/stores/servlet/BNCBHomePage?storeId=17555&catalogId=10001',
-					img: 'img/screenshots/bookstore.png'
+					img: 'img/tiles/bookstore.png'
 				}
 			},
 		},
@@ -161,17 +161,17 @@ links['Classes'] = {
 				'Apply to Graduate': {
 					id: 26,
 					url: 'https://bnr8ssbp.neu.edu/udcprod8/bwskgrad.p_disp_gradapp',
-					img: 'img/screenshots/apply_to_graduate.png'
+					img: 'img/tiles/apply_to_graduate.png'
 				},
 				'View Application to Graduate': {
 					id: 27,
 					url: 'https://bnr8ssbp.neu.edu/udcprod8/bwskgrad.p_view_gradapp',
-					img: 'img/screenshots/view_application_to_graduate.png'
+					img: 'img/tiles/view_application_to_graduate.png'
 				},
 				'NU Commencement Website': {
 					id: 28,
 					url: 'http://www.northeastern.edu/commencement/',
-					img: 'img/screenshots/NU_commencement_website.png'
+					img: 'img/tiles/NU_commencement_website.png'
 				}
 			}
 		}
@@ -419,7 +419,6 @@ links['Finance'] = {
 
 
 /*
->>>>>>> a75ba56927e2e254e319f0967cfa4a6fbb4fd078
 Categories to be done:
 
 Home
@@ -445,9 +444,9 @@ Finance
 Calendars
 University Links
 Settings
-				 */
+*/
 
-				/* Author: Eric Kelly
+/* Author: Eric Kelly
 
 
 Bugs:
@@ -501,15 +500,25 @@ function parse(links) {
 	var lhtml = '';
 	for(l in links) {
 		lhtml += '<li class="tile">';
+
 		if(favorites) {
-			$.inArray('' + links[l].id, favorites) == -1 ? lhtml += unsaved : lhtml += saved;
+			lhtml += '<div class="bookmark';
+			
+			$.inArray('' + links[l].id, favorites) == -1 ? lhtml += " unsaved" : lhtml += " saved";
+			
+			lhtml += '" alt="Bookmark"></div>';
 		}
+
 		lhtml += '<a href="' + links[l].url + '" class="image-container';
 		if(links[l].noframe) { lhtml += ' noiframe'; };
 		lhtml += '" id="' + links[l].id + '" >';
 		lhtml += '<img src="';
 		links[l].img ? lhtml += links[l].img : lhtml += default_image;
-		lhtml += '"></a><a href="' + links[l].url + '" class="name">' + l + '</a></li>';
+		lhtml += '"></a><a href="' + links[l].url + '" class="name">';
+		
+
+		
+		lhtml += l + '</a></li>';
 	}
 	return lhtml;
 }
@@ -636,11 +645,14 @@ $('#menu a').click(function() {
 });
 
 $('.bookmark').live('click', function() {
-	bookmark($(this).next().attr('id'));
-	if($(this).attr('src') == 'img/saved.jpeg') {
-		$(this).attr('src', 'img/unsaved.jpeg');
+	var el = $(this);
+	bookmark(el.next().attr('id'));
+	if(el.hasClass('saved')) {
+		el.removeClass('saved');
+		el.addClass('unsaved');
 	} else {
-		$(this).attr('src', 'img/saved.jpeg');
+		el.removeClass('unsaved');
+		el.addClass('saved');
 	}
 });
 
