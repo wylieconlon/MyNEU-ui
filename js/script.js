@@ -180,8 +180,8 @@ links['Classes'] = {
 links['Co-op and Career Services'] = {
 
 	subcategories: {
-		'Co-op': {
-			id: 'coop_coop',
+		'COOL': {
+			id: 'coop_cool',
 			links: {
 				'Getting Started': {
 					id: 29,
@@ -333,7 +333,7 @@ links['Finance'] = {
 
 	subcategories: {
 		'Financial Aid': {
-			id: 'finance_finaid',
+			id: 'finance_aid',
 			links: {
 				'My Financial Aid Status': {
 					id: 55,
@@ -656,7 +656,12 @@ $('.bookmark').live('click', function() {
 	}
 });
 
+$(window).resize(function() {
+	$('#content-frame').width($(window).width() - 300);
+});
+
 // $('#content-links').scroll(scrollSubheading);
 $(function() {
 	$('#home').click();
+	$('#content-frame').width($(window).width() - 300);
 });
