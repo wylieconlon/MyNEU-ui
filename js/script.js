@@ -7,15 +7,18 @@ links = {};
 var housinglink = {
 	id: 0,
 	url: 'https://rms.neu.edu/',
+	img: 'img/tiles/housing_on-line.png'
 }
 var mealplanlink = {
 	id: 1,
 	url: 'https://bnr8ssbp.neu.edu/udcprod8/bzskoacc.p_selmp',
+	img: 'img/tiles/meal_plan_changes.png'
 }
 
 var profilerlink = {
 	id: 2,
 	url: 'https://bnr8ssbp.neu.edu/udcprod8/bzskoacc.p_ppinfo',
+	img: 'img/tiles/profiler_meal_plan_changes.png'
 }
 
 links['Home'] = {
@@ -24,6 +27,7 @@ links['Home'] = {
 		'Husky Card Account Balances': {
 			id: 3,
 			url: 'https://prod-web.neu.edu/webapp6/HuskyCard/CurrentBalance/secure/retrieve/main.do',
+			img: 'img/tiles/husky_card_account_balances.png'
 		},
 		'LaundryView': {
 			id: 4,
@@ -186,14 +190,17 @@ links['Co-op and Career Services'] = {
 				'Getting Started': {
 					id: 29,
 					url: 'http://neubos3es100.nunet.neu.edu/myNEU/coop/gettingStarted.aspx',
+					img: 'img/tiles/getting_started.png'
 				},
 				'COOL': {
 					id: 30,
 					url: 'https://www.cool.neu.edu/students/mainmenu.aspx',
+					img: 'img/tiles/COOL.png'
 				},
 				'COOL Tour': {
 					id: 31,
 					url: 'http://www.coolquicktour.neu.edu/',
+					img: 'img/tiles/COOL_tour.png'
 				}
 			}
 		},
@@ -204,30 +211,37 @@ links['Co-op and Career Services'] = {
 				'Appointment Calendar': {
 					id: 32,
 					url: 'https://prod-web.neu.edu/webapp6/public/calendar/booking/app/secure/main.action?',
+					img: 'img/tiles/advisor_appointment_calendar.png'
 				},
 				'Contacts': {
 					id: 33,
 					url: 'http://neubos3es100.nunet.neu.edu/myNEU/tools/contacts.aspx?mode=coop',
+					img: 'img/tiles/contacts.png'
 				},
 				'Decide on a Career or Major': {
 					id: 34,
 					url: 'http://www.northeastern.edu/careerservices/majorscareers/index.html',
+					img: 'img/tiles/decide_on_a_career_or_major.png'
 				},
 				'Resume Services': {
 					id: 35,
 					url: 'http://www.northeastern.edu/careerservices/resumes/resumes.html',
+					img: 'img/tiles/resume_services.png'
 				},
 				'Cover Letter Critique': {
 					id: 36,
 					url: 'http://www.northeastern.edu/careerservices/resumes/coverletters.html',
+					img: 'img/tiles/cover_letter_critique.png'
 				},
 				'Mock Interviews': {
 					id: 37,
 					url: 'http://www.northeastern.edu/careerservices/jobsearch/interviewing.html',
+					img: 'img/tiles/mock_interviews.png'
 				},
 				'Job Search Guidance': {
 					id: 38,
 					url: 'http://www.northeastern.edu/careerservices/jobsearch/index.html',
+					img: 'img/tiles/job_search_guidance.png'
 				}
 			}
 		},
@@ -238,22 +252,27 @@ links['Co-op and Career Services'] = {
 				'Co-op Forms': {
 					id: 39,
 					url: 'http://neubos3es100.nunet.neu.edu/myNEU/tools/forms.aspx?mode=coop',
+					img: 'img/tiles/co-op_forms.png'
 				},
 				'Co-op FAQ': {
 					id: 40,
 					url: 'http://neubos3es100.nunet.neu.edu/myNEU/coop/faq.aspx',
+					img: 'img/tiles/co-op_faq.png'
 				},
 				'Find an Internship': {
 					id: 41,
 					url: 'http://www.northeastern.edu/careerservices/internships/index.html',
+					img: 'img/tiles/find_an_internship.png'
 				},
 				'Husky Career Link': {
 					id: 42,
 					url: 'http://northeastern.experience.com/er/security/login.jsp',
+					img: 'img/tiles/husky_career_link.png'
 				},
 				'Career Search': {
 					id: 43,
 					url: 'http://northeastern.experience.com/er/security/login.jsp',
+					img: 'img/tiles/career_search.png'
 				}
 			}
 		}	
@@ -272,10 +291,12 @@ links['Residence/Housing'] = {
 				'On-Campus Mailbox Information': {
 					id: 44,
 					url: 'https://prod-web.neu.edu/webapp6/resmailbox/',
+					img: 'img/tiles/on-campus_mailbox_information.png'
 				},
 				'Dining Services': {
 					id: 45,
 					url: 'http://www.nudining.com/',
+					img: 'img/tiles/dining_services.png'
 				}
 			}
 		},
@@ -285,19 +306,23 @@ links['Residence/Housing'] = {
 				'Apply for Parking': {
 					id: 46,
 					url: 'https://prod-web.neu.edu/webapp6/nuparking/SignupAuth.do',
+					img: 'img/tiles/apply_for_parking.png'
 				},
 				'Facilities Online Work Request': {
 					id: 47,
 					url: 'https://workreq.neu.edu/workrequest/',
+					img: 'img/tiles/facilities_online_work_request.png'
 				},
 
 				'Husky Express': {
 					id: 48,
 					url: 'https://workreq.neu.edu/workrequest/',
+					img: 'img/tiles/husky_express.png'
 				},
 				'LaundryView': {
 					id: 49,
 					url: 'http://www.laundryview.com/lvs.php',
+					img: 'img/tiles/laundryview.png'
 				}
 			}
 		},
@@ -307,23 +332,28 @@ links['Residence/Housing'] = {
 				'Campus Calendar': {
 					id: 50,
 					url: 'http://www.northeastern.edu/studentlife/calendar/',
+					img: 'img/tiles/campus_calendar.png'
 				},
 				'Council for University Programs': {
 					id: 51,
 					url: 'http://www.cup.neu.edu/',
+					img: 'img/tiles/council_for_university_programs.png'
 				},
 
 				'Resident Student Association': {
 					id: 52,
 					url: 'http://www.rsa.neu.edu/wordpress/',
+					img: 'img/tiles/resident_student_association.png'
 				},
 				'Student Government Association': {
 					id: 53,
 					url: 'http://www.sga.neu.edu/',
+					img: 'img/tiles/student_government_association.png'
 				},
 				'WRBB Campus Radio': {
 					id: 54,
 					url: 'http://wrbbradio.org/',
+					img: 'img/tiles/WRBB_campus_radio.png'
 				}
 			}
 		}
@@ -338,46 +368,55 @@ links['Finance'] = {
 				'My Financial Aid Status': {
 					id: 55,
 					url: 'https://www.pfw.neu.edu/NetPartnerStudent/',
+					img: 'img/tiles/my_financial_aid_status.png'
 				},
 				'Federal Loan Entrance Interview': {
 					id: 56,
 					url: 'https://studentloans.gov/myDirectLoan/index.action',
+					img: 'img/tiles/my_financial_aid_status.png'
 				},
 
 				'Endowed Scholarship Application': {
 					id: 57,
 					url: 'https://prod-web.neu.edu/webapp6/EndowedScholarship/secure/index.jsp',
+					img: 'img/tiles/my_financial_aid_status.png'
 				}
 			}
 		},
 		'My Account': {
 			id: 'finance_account',
 			links: {
-				'HuskyCard Balances': {
+				'HuskyCard Account Balances': {
 					id: 58,
 					url: 'https://prod-web.neu.edu/webapp6/HuskyCard/CurrentBalance/secure/retrieve/main.do',
+					img: 'img/tiles/husky_card_account_balances.png'
 				},
 				'HuskyCard Transactions': {
 					id: 59,
 					url: 'https://prod-web.neu.edu/webapp6/ISF/cardTxns.do',
+					img: 'img/tiles/husky_card_transactions.png'
 				},
 				'Student Account': {
 					id: 60,
 					url: 'https://bnr8ssbp.neu.edu/udcprod8/twbkwbis.P_GenMenu?name=bmenu.P_ARMnu',
+					img: 'img/tiles/student_account.png'
 				},
 				'Make a Payment': {
 					id: 61,
 					url: 'https://commerce.cashnet.com/cashnetc/selfserve/youraccount.aspx',
+					img: 'img/tiles/make_a_payment.png'
 				},
 				'Housing On-Line' : housinglink,
 				'Meal Plan Changes' : mealplanlink,
 				'Profiler Meal Plan Changes' : profilerlink,
 				'Waive Health Insurance': {
 					url: 'https://prod-web.neu.edu/webapp6/bn/HealthWaiver/initial.do',
+					img: 'img/tiles/waive_health_insurance.png'
 				},
 				'Student Refund Request': {
 					id: 62,
 					url: 'https://neuforms2.neu.edu/lfserver/nuloform/studentrefund',
+					img: 'img/tiles/student_refund_request.png'
 				}
 			}
 		},
@@ -387,27 +426,33 @@ links['Finance'] = {
 				'Zipcar at NU': {
 					id: 63,
 					url: 'http://www.zipcar.com/northeastern/',
+					img: 'img/tiles/zipcar_at_NU.png'
 				},
 				'Comcast Advantage Program': {
 					id: 64,
 					url: 'http://www.comcast.com/neusignup/',
+					img: 'img/tiles/comcast_advantage_program.png'
 				},
 				'Comcast Advantage Program Form': {
 					id: 65,
 					url: 'http://myneu.neu.edu/tag.2736ec18fe7f48ab.render.userLayoutRootNode.target.u49l1n137.uP?cw_inChannelLink=1&cw_xml=http://www.comcast-ne.com/nuspecialoffer',
+					img: 'img/tiles/comcast_advantage_program_form.png'
 				},
 				'NU Apple Store': {
 					id: 66,
 					url: 'https://prod-web.neu.edu/webapp6/NuRedirects/appleJump.html',
+					img: 'img/tiles/NU_apple_store.png'
 				},
 				'NU Dell Store': {
 					id: 67,
 					url: 'https://prod-web.neu.edu/webapp6/NuRedirects/redirect.jsp?store=dell_student',
+					img: 'img/tiles/NU_dell_store.png'
 				},
 
 				'Free and Discounted Software': {
 					id: 68,
 					url: 'http://neu.e-academy.com',
+					img: 'img/tiles/free_and_discounted_software.png'
 				}
 			}
 		}
