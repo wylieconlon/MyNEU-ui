@@ -363,9 +363,18 @@ body {
 
 h3 {
 	clear: both;
+	
+	height: 32px;
+	line-height: 32px;
+	
+	padding: 0 30px;
+	
+	margin: 0 -20px;
 	margin-top: 20px;
-	padding-bottom: 20px;
-	border-bottom: 1px solid #bbb;
+	
+	background: url('../img/subhead.png') repeat-x;
+	color: #fff;
+	font-size: 13px;
 }
 
 #content-frame {
@@ -385,18 +394,28 @@ h3 {
    Navbar
    ========================================================================== */
 
-#navbar {
-	position: fixed;
+#navbar-wrapper, #navbar {
 	height: 55px;
+}
+
+/* Navbar needs its own fixed-position container */
+#navbar-wrapper {
+	position: fixed;
 	width: 100%;
+	top: 0;
+	left: 0;
+}
+
+#navbar {
+	margin-left: 300px;
+	border-bottom: 1px solid #bbb;
+	
 	z-index: 999;
 	background: #f2f2f2 url('../img/nav.png') repeat-x;
-	
-	border-bottom: 1px solid #bbb;
 }
 
 #navbar #back {
-	display: inline;
+	position: absolute;
 	
 	color: #333;
 	
@@ -404,12 +423,14 @@ h3 {
 	
 	line-height: 56px;
 	margin-left: 20px;
+	
+	cursor: pointer;
 }
 
 #navbar h1 {
-	display: inline;
 	line-height: 56px;
-	margin-left: 250px;
+	text-align: center;
+	margin: 0;
 }
 
 

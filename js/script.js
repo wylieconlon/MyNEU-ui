@@ -396,34 +396,13 @@ links['Residence/Housing'] = {
 links['Finance'] = {
 
 	subcategories: {
-		'Financial Aid': {
-			id: 'finance_aid',
-			links: {
-				'My Financial Aid Status': {
-					id: 55,
-					url: 'https://www.pfw.neu.edu/NetPartnerStudent/',
-					img: 'img/tiles/my_financial_aid_status.png'
-				},
-				'Federal Loan Entrance Interview': {
-					id: 56,
-					url: 'https://studentloans.gov/myDirectLoan/index.action',
-					img: 'img/tiles/my_financial_aid_status.png'
-				},
-
-				'Endowed Scholarship Application': {
-					id: 57,
-					url: 'https://prod-web.neu.edu/webapp6/EndowedScholarship/secure/index.jsp',
-					img: 'img/tiles/my_financial_aid_status.png'
-				}
-			}
-		},
 		'My Account': {
 			id: 'finance_account',
 			links: {
 				'HuskyCard Account Balances': {
 					id: 58,
 					url: 'https://prod-web.neu.edu/webapp6/HuskyCard/CurrentBalance/secure/retrieve/main.do',
-					img: 'img/tiles/husky_card_account_balances.png'
+					img: 'img/tiles/balance.png'
 				},
 				'HuskyCard Transactions': {
 					id: 59,
@@ -451,6 +430,27 @@ links['Finance'] = {
 					id: 62,
 					url: 'https://neuforms2.neu.edu/lfserver/nuloform/studentrefund',
 					img: 'img/tiles/student_refund_request.png'
+				}
+			}
+		},
+		'Financial Aid': {
+			id: 'finance_aid',
+			links: {
+				'My Financial Aid Status': {
+					id: 55,
+					url: 'https://www.pfw.neu.edu/NetPartnerStudent/',
+					img: 'img/tiles/my_financial_aid_status.png'
+				},
+				'Federal Loan Entrance Interview': {
+					id: 56,
+					url: 'https://studentloans.gov/myDirectLoan/index.action',
+					img: 'img/tiles/my_financial_aid_status.png'
+				},
+
+				'Endowed Scholarship Application': {
+					id: 57,
+					url: 'https://prod-web.neu.edu/webapp6/EndowedScholarship/secure/index.jsp',
+					img: 'img/tiles/my_financial_aid_status.png'
 				}
 			}
 		},
@@ -623,7 +623,7 @@ function jsonToHTML(data, category) {
 		switch(subcat) {
 		case 'id':
 			if(data.id != '') {
-				subheading = "<h3 id='"+ data.id + "'>"+category+"</h3>";
+				subheading = "<div class='clearfix'></div><h3 id='"+ data.id + "'>"+category+"</h3>";
 			}
 			break;
 		case 'links':
