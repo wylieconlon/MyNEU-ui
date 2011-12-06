@@ -21,30 +21,83 @@ var profilerlink = {
 	img: 'img/tiles/profiler_meal_plan_changes.png'
 }
 
+var studentemployment = {
+	id: 69,
+	url: 'https://studentemployment.neu.edu/JobXHome.aspx'
+}
+
+var tickets = {
+	id: 70,
+	url: 'http://neu.universitytickets.com/user_pages/event_listings.asp',
+	img: 'img/tiles/tickets.png'
+}
+
+var cool = {
+	id: 30,
+	url: 'https://www.cool.neu.edu/students/mainmenu.aspx',
+	img: 'img/tiles/COOL.png'
+}
+
+var mailbox = {
+	id: 44,
+	url: 'https://prod-web.neu.edu/webapp6/resmailbox/',
+	img: 'img/tiles/mailbox.png'
+}
+
+var dining = {
+	id: 45,
+	url: 'http://www.nudining.com/',
+	img: 'img/tiles/dining.png'
+}
+
+var workrequest = {
+	id: 47,
+	url: 'https://workreq.neu.edu/workrequest/',
+	img: 'img/tiles/workorder.png'
+}
+
+var blackboard = {
+	id: 10,
+	url: 'http://myneu.neu.edu/cp/ip/login?sys=bb&url=http://blackboard.neu.edu/',
+	img: 'img/tiles/blackboard.png'
+}
+
+var courses = {
+	id: 5,
+	url: 'https://bnr8ssbp.neu.edu/udcprod8/twbkwbis.P_GenMenu?name=bmenu.P_RegMnu',
+	img: 'img/tiles/courses.png'
+}
+
 links['Home'] = {
 
 	links: {
-		'Husky Card Account Balances': {
-			id: 3,
-			url: 'https://prod-web.neu.edu/webapp6/HuskyCard/CurrentBalance/secure/retrieve/main.do',
-			img: 'img/tiles/husky_card_account_balances.png'
-		},
-		'LaundryView': {
-			id: 4,
-			url: 'http://www.laundryview.com/lvs.php',
-			img: 'img/tiles/laundryview.png'
-		},
-		'Course Information and Registration': {
-			id: 5,
-			url: 'https://bnr8ssbp.neu.edu/udcprod8/twbkwbis.P_GenMenu?name=bmenu.P_RegMnu',
-			img: 'img/tiles/course_information_and_registration.png'
-		},
 		'Husky Mail': {
 			id: 6,
 			url: 'http://mail.husky.neu.edu/',
 			img: 'img/tiles/huskymail.png',
 			noframe: true
-		}
+		},
+		'Blackboard': blackboard,
+		'Husky Card Account Balances': {
+			id: 3,
+			url: 'https://prod-web.neu.edu/webapp6/HuskyCard/CurrentBalance/secure/retrieve/main.do',
+			img: 'img/tiles/balance.png'
+		},
+		'LaundryView': {
+			id: 4,
+			url: 'http://www.laundryview.com/lvs.php',
+			img: 'img/tiles/laundry.png'
+		},
+		'COOL': cool,
+		'Hours': {
+			id: 71,
+			url: 'http://crew-hours.ccs.neu.edu/',
+
+		},
+		'Course Registration': courses,
+		'Tickets': tickets,
+		'Dining Services': dining,
+		'Work Request': workrequest
 	}
 };
 links['Classes'] = {
@@ -71,11 +124,7 @@ links['Classes'] = {
 					url: 'https://bnr8ssbp.neu.edu/udcprod8/NEUCLSS.p_disp_dyn_sched',
 					img: 'img/tiles/schedule_of_classes.png'
 				},
-				'Course Registration': {
-					id: 10,
-					url: 'https://bnr8ssbp.neu.edu/udcprod8/twbkwbis.P_GenMenu?name=bmenu.P_RegMnu',
-					img: 'img/tiles/course_registration.png'
-				},
+				'Course Registration': courses,
 				'My Schedule': {
 					id: 11,
 					url: 'https://bnr8ssbp.neu.edu/udcprod8/bwskfshd.P_CrseSchdDetl',
@@ -129,10 +178,11 @@ links['Classes'] = {
 			id: 'classes_resources',
 			
 			links: {
+				'Blackboard': blackboard,
 				'Advisor Appointment Calendar': {
 					id: 20,
 					url: 'https://prod-web.neu.edu/webapp6/public/calendar/booking/app/secure/main.action?',
-					img: 'img/tiles/advisor_appointment_calendar.png'
+					img: 'img/tiles/advising.png'
 				},
 				'Request a Tutor': {
 					id: 21,
@@ -192,11 +242,7 @@ links['Co-op and Career Services'] = {
 					url: 'http://neubos3es100.nunet.neu.edu/myNEU/coop/gettingStarted.aspx',
 					img: 'img/tiles/getting_started.png'
 				},
-				'COOL': {
-					id: 30,
-					url: 'https://www.cool.neu.edu/students/mainmenu.aspx',
-					img: 'img/tiles/COOL.png'
-				},
+				'COOL': cool,
 				'COOL Tour': {
 					id: 31,
 					url: 'http://www.coolquicktour.neu.edu/',
@@ -288,16 +334,8 @@ links['Residence/Housing'] = {
 				'Meal Plan Changes' : mealplanlink,
 				'Profiler Meal Plan Changes' : profilerlink,
 
-				'On-Campus Mailbox Information': {
-					id: 44,
-					url: 'https://prod-web.neu.edu/webapp6/resmailbox/',
-					img: 'img/tiles/on-campus_mailbox_information.png'
-				},
-				'Dining Services': {
-					id: 45,
-					url: 'http://www.nudining.com/',
-					img: 'img/tiles/dining_services.png'
-				}
+				'Mailbox Information': mailbox,
+				'Dining Services': dining
 			}
 		},
 		'Informational Links': {
@@ -308,11 +346,7 @@ links['Residence/Housing'] = {
 					url: 'https://prod-web.neu.edu/webapp6/nuparking/SignupAuth.do',
 					img: 'img/tiles/apply_for_parking.png'
 				},
-				'Facilities Online Work Request': {
-					id: 47,
-					url: 'https://workreq.neu.edu/workrequest/',
-					img: 'img/tiles/facilities_online_work_request.png'
-				},
+				'Facilities Work Request': workrequest,
 
 				'Husky Express': {
 					id: 48,
