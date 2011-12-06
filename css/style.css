@@ -283,7 +283,6 @@ body {
 	padding: 0;
 	margin: 0;
 
-
 	background: #333;
 	
 	z-index: 1000;
@@ -406,13 +405,13 @@ h3 {
 	width: 100%;
 	top: 0;
 	left: 0;
+	z-index: 999;
 }
 
 #navbar {
 	margin-left: 300px;
 	border-bottom: 1px solid #bbb;
 	
-	z-index: 999;
 	background: #f2f2f2 url('../img/nav.png') repeat-x;
 }
 
