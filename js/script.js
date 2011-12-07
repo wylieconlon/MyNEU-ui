@@ -607,9 +607,9 @@ function bookmark(id) {
 	if(ia == -1) {
 		favorites.push(id);
 	} else {
-		favorites.splice(ia, ia);
+		favorites.splice(ia, 1);
 	}
-	$.cookie('favorites', favorites.join(), { expires: 7 });
+	$.cookie('favorites', favorites.join(), { expires: 365 });
 }
 
 function jsonToHTML(data, category) {
